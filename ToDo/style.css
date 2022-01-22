@@ -1,0 +1,62 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+.root {
+    width:100%;
+    position: absolute;
+    height:max-content;
+}
+
+.navbar {
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    background-color: #346fef;
+}
+
+.navbar .text {
+    width:10%;
+    margin-left: 10px;
+    float: left;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 600;
+    line-height: 48px;
+    color: white;
+}
+
+.navbar .search-box {
+    width: 40%;
+    margin:0;
+    padding:0;
+    width: 400px;
+    margin: 8px auto;
+    height: 32px;
+    border-radius: 2px;
+    background-color: rgba(244,246,255,0.8);
+}
+
+.search-box button {
+    margin: 0;
+    padding:0;
+    border: 0;
+    width: 25px;
+    height:32px;
+    color: blue;
+    background-color: rgba(244,246,255,0.8);
+}
+
+.navbar .header-menu {
+    width: 30%;
+    float: right;
+    text-align: right;
+    margin-right: 0;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 600;
+    line-height: 48px;
+    color: black;
+}
