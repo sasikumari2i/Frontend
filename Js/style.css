@@ -1,0 +1,40 @@
+body {
+    background-color: rgb(93, 236, 255);
+}
+
+.calc-body {
+    width: 350px;
+    height: 450px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 6%;
+    background-color: black;
+}
+
+.display {
+    height: 50px;
+    margin: 20px auto;
+    background-color: rgb(241, 236, 236);
+}
+
+.calculator {
+    margin: auto;
+    text-align: center;
+}
+
+button {
+    font-family: 'Orbitron', sans-serif;
+    background-color:rgb(241, 236, 236);
+    color: black;
+    font-size: large;
+    border-radius: 5%;
+    width: 70px;
+    margin: 5px;
+    height: 60px;
+}
+
+.btn-equals {
+   width: 92%;
+   margin: 10px auto;   
+   background-color: red;
+}

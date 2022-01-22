@@ -1,0 +1,169 @@
+ *{
+    margin: auto;
+    padding: 10px;
+    font-family: "Poppins", sans-serif;
+  }
+
+.resume {
+    width: 100%;
+    color: rgb(59,93,160);
+  }
+
+  .resume .resume_left {
+    float: left;
+    width: 20%;
+    padding-top: 10px;
+  }
+
+  .icon span {
+    margin: auto;
+    font-size: normal;
+  }
+
+  .period .icon img {
+    width: 5%;
+    margin:0;
+    padding-top: 2px;
+  }
+
+  .role {
+    margin:auto;
+    font-size: larger;
+  }
+
+
+  .contact .icon img {
+    width: 7%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .academics .education_details .icon img {
+    width: 5%;
+    margin: 0;
+    padding: 0;
+    padding-top: 5px;
+  }
+
+  .line {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    align-content: center;
+    width: 100%;
+    border-top: 1px solid cyan;  
+  }
+
+  .contact .icon {
+    margin: 2px;
+  }
+
+  .details {
+    text-align: center;    
+  }
+
+  .profile img {
+    padding-bottom: 5px;
+    display:flex;
+    justify-content: center;
+    border-radius: 50%;
+    width: 50%;
+  }
+
+  .icon {
+    margin: 0;
+    padding: 0px;
+    font-size: 12px;
+    width: 100%;
+  }
+
+  .professional {
+    margin: auto;
+    padding-top: 0px;
+  }
+
+  .headings {
+    margin: auto;
+    padding-bottom: 5px;
+  }
+
+  .academics .period {
+    margin: 15px;
+    padding : 0px;
+    float: right;
+    width: 40%;
+    text-align: end;
+    font: bold;
+  }
+
+  .resume_right .summary {
+    margin-left: 10px;
+  }
+
+  .academics .icon {
+    color: cornflowerblue;
+  }
+
+  .academics .period .icon span .education_calendar {
+    padding-top: 30px;
+  }
+
+  .academics .period .icon img {
+    width: 5%;
+    margin: auto;
+    margin-top: 5px;
+    padding: 0;
+    padding-top: 5px;
+  }
+
+  .academics .period label {
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 12px;
+    padding: 15px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    background-color: cyan;
+  }
+
+  .academics {
+    margin: auto;
+    padding: 0;
+  }
+
+  .academics .education_details {
+    margin: auto;
+    width: 50%;
+    float: left;
+  }
+  
+
+  .academics img {
+    width: 5%;
+  }
+
+  .resume_right .academics {
+    margin: auto;
+  }
+
+  .download_button button{
+    margin: 5px;
+    border-radius: 12px;
+    background-color: blue;
+    color:white;
+  }
+
+  .resume .resume_right {
+    width: 55%;  
+    margin: auto;
+  }
+
+  .footer {
+    margin: auto;
+    width: 100%;
+    padding: 50px;
+  }
