@@ -9,44 +9,47 @@
 </head>
 
 <body>
-    <div class="navbar">
-        <div class="header-left">
-            <span class="material-icons apps-icon">apps</span>
-            <span class="todo">To Do</span>
-        </div>
-        <div class="search-box">
-            <span class= "material-icons search">search</span><input class="search-text">
-        </div>
-        <div class="header-right">
-            <span class="material-icons">settings</span>
+    <div class="head-container">
+        <span class="material-icons">apps</span>
+        <span class="title">To Do</span>
+        <span class="material-icons search">search</span><input class="search-text">
+        <div class="head-right">
+            <span id="settings-cta" class="material-icons">settings</span>
             <span class="material-icons">question_mark</span>
             <span class="material-icons">campaign</span>
-            <span class="material-icons">sentiment_satisfied_alt</span>
+            <span class="material-icons">P</span>
         </div>
     </div>
 
-    <div class="content-class">
+    <div class="left-container">
+        <span id="ham-cta" class="material-icons menu">menu</span>
+        <nav id="ham-menu" class="hammenu-display">
+            <ul class="ham-display">
+                <span id="ham-cta-closer" class="material-icons menu">menu</span>
+                <li><span class="material-icons option">light_mode</span>My Day</li>
+                <li><span class="material-icons option">star_border</span>Important</li>
+                <li><span class="material-icons option">calendar_month</span>Planned</li>
+                <li><span class="material-icons option">perm_identity</span>Assigned to Me</li>
+                <li><span class="material-icons option">home</span>Tasks</li>
+            </ul>
+        </nav>
+    </div>
 
-        <section class="hero">
-            <div class=head-row>
-                <span id="ham-cta" class="material-icons ham-menu">menu</span>
-                <h1 style="display: inline;">My Day</h1>
-                <ul class="head-btns">
-                    <li style="display: inline;"><a href="#">Sort</a></li>
-                    <li style="display: inline;"><a href="#">Suggestions</a></li>
-                </ul>
-                <nav id="ham-menu" class="hammenu-display">
-                    <ul class="ham-display">
-                        <li><a href="#">My Day</a></li>
-                        <li><a href="#">Important</a></li>
-                        <li><a href="#">Planned</a></li>
-                        <li><a href="#">Assigned to me</a></li>
-                        <li><a href="#">Tasks</a></li>
-                    </ul>
-                </nav>
-            </div>
-
-        </section>
+    <div class="right-container">
+        <nav id="settings-menu" class="right-settings">
+            <span id="settings-cta-closer" class="material-icons close">close</span>
+            <h2>Settings</h2>
+            <h3>General</h3>
+            <ul class="settings-list">
+                <li>Confirm before deleting</li>
+                <li>Add new tasks on top</li>
+                <li>Move starred tasks to top</li>
+                <li>Play completion sound</li>
+                <li>Show right-click menus</li>
+                <li>Turn on reminder notifications</li>
+                <li>Show tasks that seems important in My Day</li>
+            </ul>
+        </nav>
     </div>
     <script>
         const hamBtn = document.getElementById('ham-cta')
@@ -54,6 +57,31 @@
         hamBtn.addEventListener('click', () => {
             nav.classList.add('menu-btn');
         })
+
+        const closeBtn = document.getElementById('ham-cta-closer')
+        nav = document.querySelector('nav');
+        closeBtn.addEventListener('click', () => {
+            nav.classList.remove('menu-btn');
+        })
+
+        const setBtn = document.getElementById('settings-cta')
+        setList = document.getElementById('settings-menu')
+
+        setBtn.addEventListener('click', () => {
+            if (setList.classList.contains('set-btn')) {
+                setList.classList.remove('set-btn');
+            } else {
+                setList.classList.add('set-btn');
+            }
+        })
+
+        const closeRight = document.getElementById('settings-cta-closer')
+        setList = document.getElementById('settings-menu')
+        console.log(setList)
+        closeRight.addEventListener('click', () => {
+            setList.classList.remove('set-btn');
+        })
+
     </script>
 </body>
 
