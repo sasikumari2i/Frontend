@@ -1,26 +1,60 @@
 <!DOCTYPE html>
 
+<html>
+
 <head>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/7ededfaa71.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-    <div class="root">
-        <div class="navbar">
-            <span class="text">To Do</span>
-            <div class="header-menu">
-                <button class="settings">SE</button>
-                <button class="settings">HE</button>
-                <button class="settings">WN</button>
-                <button class="settings">UP</button>
-            </div>
-            <div class="search-box">
-                <button class="fas fa-search search-btn"></button>
-            </div>
+    <div class="navbar">
+        <div class="header-left">
+            <span class="material-icons apps-icon">apps</span>
+            <span class="todo">To Do</span>
+        </div>
+        <div class="search-box">
+            <span class= "material-icons search">search</span><input class="search-text">
+        </div>
+        <div class="header-right">
+            <span class="material-icons">settings</span>
+            <span class="material-icons">question_mark</span>
+            <span class="material-icons">campaign</span>
+            <span class="material-icons">sentiment_satisfied_alt</span>
         </div>
     </div>
+
+    <div class="content-class">
+
+        <section class="hero">
+            <div class=head-row>
+                <span id="ham-cta" class="material-icons ham-menu">menu</span>
+                <h1 style="display: inline;">My Day</h1>
+                <ul class="head-btns">
+                    <li style="display: inline;"><a href="#">Sort</a></li>
+                    <li style="display: inline;"><a href="#">Suggestions</a></li>
+                </ul>
+                <nav id="ham-menu" class="hammenu-display">
+                    <ul class="ham-display">
+                        <li><a href="#">My Day</a></li>
+                        <li><a href="#">Important</a></li>
+                        <li><a href="#">Planned</a></li>
+                        <li><a href="#">Assigned to me</a></li>
+                        <li><a href="#">Tasks</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </section>
+    </div>
+    <script>
+        const hamBtn = document.getElementById('ham-cta')
+        nav = document.querySelector('nav');
+        hamBtn.addEventListener('click', () => {
+            nav.classList.add('menu-btn');
+        })
+    </script>
 </body>
 
 </html>

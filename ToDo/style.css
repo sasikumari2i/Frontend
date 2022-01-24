@@ -1,62 +1,127 @@
-* {
-    margin:0;
-    padding:0;
-}
-
-.root {
-    width:100%;
-    position: absolute;
-    height:max-content;
+body {
+    margin: 0;
 }
 
 .navbar {
     width: 100%;
-    height: 50px;
-    margin: 0;
-    padding: 0;
-    background-color: #346fef;
-}
-
-.navbar .text {
-    width:10%;
-    margin-left: 10px;
-    float: left;
-    font-size: 16px;
-    font-family: sans-serif;
-    font-weight: 600;
-    line-height: 48px;
+    background: #0078D7;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
     color: white;
 }
 
-.navbar .search-box {
-    width: 40%;
-    margin:0;
-    padding:0;
+
+.navbar .logo {
+    margin-top: -5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+.title {
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 15px;
+  }
+
+.navbar .material-icons {
+    padding: 10px;
+    cursor: pointer;
+    font-weight: normal;
+    color:white;
+}
+
+.material-icons {
+    cursor: pointer;
+}
+
+.ham-menu {
+    width:25px;
+    height:25px;
+    cursor: pointer;
+    padding: 4px 4px 0 4px;
+    margin-top: 4px;
+}
+
+.hero nav {
+    margin-left:0;
+    margin-top:155px;
+    position: fixed;
+    z-index: 999;   
+    width: 20%;
+    padding: 1em;
+    display: none;
+    background: #f2f8fd;
+    left: 0;
+    top: 0;
+    height: 100vh;
+}
+
+
+
+.hammenu-display {
+    display:block;
+}
+
+.ham-display {
+    margin-left: -50px;
+    margin-top: 50px;
+    
+}
+
+.ham-display li {
+    display: block;
+    padding: 0.5em;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.head-row {
+    margin-bottom: 5em;
+}
+
+.search-text {
+    position: absolute;
+    margin-top: 8px;
+    
     width: 400px;
-    margin: 8px auto;
-    height: 32px;
+    background: rgba(244, 246, 255, 0.8);
+    height: 30px;
+    border: none;
+    opacity: 90%;
     border-radius: 2px;
-    background-color: rgba(244,246,255,0.8);
-}
+  }
 
-.search-box button {
-    margin: 0;
-    padding:0;
-    border: 0;
-    width: 25px;
-    height:32px;
-    color: blue;
-    background-color: rgba(244,246,255,0.8);
-}
-
-.navbar .header-menu {
-    width: 30%;
+.head-btns {
     float: right;
-    text-align: right;
-    margin-right: 0;
-    font-size: 16px;
-    font-family: sans-serif;
-    font-weight: 600;
-    line-height: 48px;
-    color: black;
 }
+
+.content-class a {
+     text-decoration: none;
+     color: black;
+}
+
+.head-row {
+    padding: 5px;
+}
+
+nav.menu-btn {
+    display: block;
+}
+
+.secondary-nav {
+    float: right;
+}
+
+.navbar ul {
+    margin: 0;
+}
+
