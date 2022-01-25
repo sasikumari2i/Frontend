@@ -1,6 +1,18 @@
 body {
     margin: 0;
     font-family: "Segoe", "Segoe UI", "Arial", "sans-serif";
+    border: 1px;
+}
+
+.head-container {
+    color: white;
+    background-color: #0078d7;
+    height: 48px;
+    font-weight: bold;
+}
+
+.head-right {
+    float: right;
 }
 
 .material-icons {
@@ -25,28 +37,8 @@ body {
     cursor: pointer;
 }
 
-.head-right {
-    float: right;
-}
-
-.head-container {
-    background-color: #0078d7;
-    color: white;
-    height: 48px;
-    font-weight: bold;
-}
-
-.head-container .material-icons {
-    color: white;
-}
-
 .search-text:hover {
     background-color: rgb(255, 255, 255);
-    transition: 0s;
-}
-  
-.head-container .material-icons:hover {
-    background-color: #4e4e55d2;
     transition: 0s;
 }
 
@@ -62,32 +54,72 @@ body {
     border-radius: 2px;
 }
 
-ul {
-    list-style-type: none;
-    text-decoration: none;
+.head-container .material-icons:hover {
+    background-color: #4e4e55d2;
+    transition: 0s;
+}
+
+.head-container .material-icons {
+    color: white;
 }
 
 
-.left-container nav {
-    margin-left:0;
-    margin-top:48px;
+/*From here*/
+
+.sidenav {
+    height: 100%;
+    width: 0;
     position: fixed;
-    /*z-index: 999;*/   
-    width: 20%;
-    padding: 0 1em 1em 1em;
-    display: none;
-    text-decoration: none;
+    z-index: 1;
+    top: 48px;
+    left: 0;
+    text-align: left;
+    font-size: 14px;
     background: #f2f8fd;
-    left: -1em;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 1em;
+}
+
+.right-settings {
+    overflow-x: hidden;
+    transition: 1s;
+}
+
+.sidenav li {
+    padding: 8px 8px 8px 0;
+    margin-left: -3em;
+    text-decoration: none;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav li:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
     top: 0;
-    height: 100vh;
+    font-size: 36px;
+}
+
+.left-menu {
+    align-items: center;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.left-menu span:hover {
+    background: chocolate;
 }
 
 .right-container nav {
-    margin-right:0;
-    margin-top:48px;
+    transition: 0.5s;
+    margin-right: 0;
+    margin-top: 48px;
     position: fixed;
-    /*z-index: 999;*/   
     width: 25%;
     display: none;
     padding: 1em;
@@ -98,27 +130,24 @@ ul {
     height: 100vh;
 }
 
-.close {
-    display: inline;
-    float:right;
-    margin-top: 0.5em;
-}
-
-nav.menu-btn {
-    display: block;
+ul {
+    list-style-type: none;
+    text-decoration: none;
 }
 
 nav.set-btn {
     display: block;
+    transition: 0.5s;
 }
 
-.ham-display {
-    margin: 0;
-    padding: 0;
-    align-items: center;
+.close {
+    display: inline;
+    float: right;
+    margin-top: 0.5em;
 }
 
 .settings-list {
+    transition: 1s;
     margin: 0;
     padding: 0;
     align-items: center;
@@ -129,4 +158,64 @@ nav.set-btn {
     padding: 1em;
     align-items: center;
     font-size: 14px;
+}
+
+.head-right {
+    float: right;
+}
+
+.center-head {
+    display: flex;
+    width: 100%;
+    margin: 10px;
+    height: 72px;
+}
+
+.center-head-right {
+    width: 30%;
+    text-align: right;
+    padding-right: 25px;
+    margin-top: -5px;
+}
+
+.my-day {
+    width: 70%;
+    font-weight: 520;
+    font-size: 20px;
+    margin: 6px;
+    padding: 0;
+}
+
+.center-add-task {
+    display: flex;
+    margin: 0 8px;
+    border-radius: 4px;
+    padding: 8px;
+    border: 1px solid #ededed;
+}
+
+.add-task-text {
+    width: 100%;
+    border: none;
+}
+
+
+/*Lines from here*/
+
+.hr-tags {
+    margin: 0 10px;
+    padding: 0;
+    height: 100%;
+}
+
+hr {
+    padding: 0.1px;
+    margin: 0 10px;
+}
+
+.hr-tags div {
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    padding: 0;
 }

@@ -21,18 +21,42 @@
         </div>
     </div>
 
-    <div class="left-container">
-        <span id="ham-cta" class="material-icons menu">menu</span>
-        <nav id="ham-menu" class="hammenu-display">
-            <ul class="ham-display">
-                <span id="ham-cta-closer" class="material-icons menu">menu</span>
-                <li><span class="material-icons option">light_mode</span>My Day</li>
-                <li><span class="material-icons option">star_border</span>Important</li>
-                <li><span class="material-icons option">calendar_month</span>Planned</li>
-                <li><span class="material-icons option">perm_identity</span>Assigned to Me</li>
-                <li><span class="material-icons option">home</span>Tasks</li>
-            </ul>
-        </nav>
+    <div class="center-container">
+        <div id="mySidenav" class="sidenav">
+            <span onclick="closeNav()" class="material-icons menu">menu</span>
+            <div class="left-menu"><span class="material-icons option">light_mode</span>My Day
+            </div>
+            <div class="left-menu"><span class="material-icons option">star_border</span>Important
+            </div>
+            <div class="left-menu"><span class="material-icons option">calendar_month</span>Planned
+            </div>
+            <div class="left-menu"><span class="material-icons option">perm_identity</span>Assigned to Me
+            </div>
+            <div class="left-menu"><span class="material-icons option">home</span>Tasks
+            </div>
+        </div>
+
+        <div class="center-content">
+            <div class="center-head">
+                <span id="nav-btn" onclick="openNav()" class="material-icons menu">menu</span>
+                <div id="main" class="my-day">
+                    <p class="my-day">My Day</p>
+                </div>
+                <div class="center-head-right">
+                    <span class="material-icons">
+                        import_export</span>Sort
+                    <span class="material-icons">
+                        lightbulb</span>Suggestions
+                </div>
+            </div>
+        </div>
+        <div class="add-tasks">
+            <div id="add-main" class="center-add-task">
+                <span id="settings-cta-closer" class="material-icons">add</span>
+                <input class="add-task-text" placeholder="Add a task">
+            </div>
+            <div id="hr-line" class="hr-tags"></div>
+        </div>
     </div>
 
     <div class="right-container">
@@ -51,38 +75,7 @@
             </ul>
         </nav>
     </div>
-    <script>
-        const hamBtn = document.getElementById('ham-cta')
-        nav = document.querySelector('nav');
-        hamBtn.addEventListener('click', () => {
-            nav.classList.add('menu-btn');
-        })
 
-        const closeBtn = document.getElementById('ham-cta-closer')
-        nav = document.querySelector('nav');
-        closeBtn.addEventListener('click', () => {
-            nav.classList.remove('menu-btn');
-        })
-
-        const setBtn = document.getElementById('settings-cta')
-        setList = document.getElementById('settings-menu')
-
-        setBtn.addEventListener('click', () => {
-            if (setList.classList.contains('set-btn')) {
-                setList.classList.remove('set-btn');
-            } else {
-                setList.classList.add('set-btn');
-            }
-        })
-
-        const closeRight = document.getElementById('settings-cta-closer')
-        setList = document.getElementById('settings-menu')
-        console.log(setList)
-        closeRight.addEventListener('click', () => {
-            setList.classList.remove('set-btn');
-        })
-
-    </script>
 </body>
 
 </html>
