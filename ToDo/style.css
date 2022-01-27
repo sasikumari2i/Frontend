@@ -15,10 +15,18 @@ body {
     float: right;
 }
 
+.center-important-content {
+    display: none;
+}
+
 .material-icons {
     padding: 10px;
     font-weight: normal;
     color: #595d6170;
+    cursor: pointer;
+}
+
+.left-menu {
     cursor: pointer;
 }
 
@@ -164,7 +172,14 @@ nav.set-btn {
     float: right;
 }
 
-.center-head {
+.center-myday-head {
+    display: flex;
+    width: 100%;
+    margin: 10px;
+    height: 72px;
+}
+
+.center-important-head {
     display: flex;
     width: 100%;
     margin: 10px;
@@ -186,7 +201,37 @@ nav.set-btn {
     padding: 0;
 }
 
-.center-add-task {
+.important {
+    /*width: 70%;*/
+    font-weight: 520;
+    font-size: 20px;
+    margin: 6px;
+    padding: 0;
+}
+
+.center-add-myday {
+    margin: 0 8px;
+    border-radius: 4px;
+    padding: 8px;
+    border: 1px solid #ededed;
+}
+
+.add-input-myday {
+    width: 100%;
+    display: flex;
+}
+
+.add-btn {
+    padding: 5px;
+    cursor: pointer;
+    display: none;
+    justify-content: end;
+    padding-right: 15px;
+    font-size: x-small;
+    font-weight: bold;
+}
+
+.center-add-important {
     display: flex;
     margin: 0 8px;
     border-radius: 4px;
@@ -194,7 +239,12 @@ nav.set-btn {
     border: 1px solid #ededed;
 }
 
-.add-task-text {
+.add-myday-text {
+    width: 100%;
+    border: none;
+}
+
+.add-important-text {
     width: 100%;
     border: none;
 }
@@ -202,7 +252,13 @@ nav.set-btn {
 
 /*Lines from here*/
 
-.hr-tags {
+.myday-hr {
+    margin: 0 10px;
+    padding: 0;
+    height: 100%;
+}
+
+.important-hr {
     margin: 0 10px;
     padding: 0;
     height: 100%;
@@ -213,7 +269,14 @@ hr {
     margin: 0 10px;
 }
 
-.hr-tags div {
+.myday-hr div {
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.important-hr div {
     width: 100%;
     height: 40px;
     margin: 0;

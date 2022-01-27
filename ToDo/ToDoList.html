@@ -24,9 +24,9 @@
     <div class="center-container">
         <div id="mySidenav" class="sidenav">
             <span onclick="closeNav()" class="material-icons menu">menu</span>
-            <div class="left-menu"><span class="material-icons option">light_mode</span>My Day
+            <div id="myday-click" class="left-menu"><span class="material-icons option">light_mode</span>My Day
             </div>
-            <div class="left-menu"><span class="material-icons option">star_border</span>Important
+            <div id="important-click" class="left-menu"><span class="material-icons option">star_border</span>Important
             </div>
             <div class="left-menu"><span class="material-icons option">calendar_month</span>Planned
             </div>
@@ -36,26 +36,49 @@
             </div>
         </div>
 
-        <div class="center-content">
-            <div class="center-head">
-                <span id="nav-btn" onclick="openNav()" class="material-icons menu">menu</span>
-                <div id="main" class="my-day">
-                    <p class="my-day">My Day</p>
-                </div>
-                <div class="center-head-right">
-                    <span class="material-icons">
+        <div id="main" class="center-content">
+            <div id="myday-content" class="center-myday-content">
+                <div class="center-myday-head">
+                    <span id="nav-btn" onclick="openNav()" class="material-icons menu">menu</span>
+                    <div id="main" class="my-day">
+                        <p class="my-day">My Day</p>
+                    </div>
+                    <div class="center-head-right">
+                        <span class="material-icons">
                         import_export</span>Sort
-                    <span class="material-icons">
+                        <span class="material-icons">
                         lightbulb</span>Suggestions
+                    </div>
+                </div>
+                <div class="add-myday-tasks">
+                    <div id="myday-add-btn" class="center-add-myday">
+                        <div id="add-main" class="add-input-myday">
+                            <span id="settings-cta-closer" class="material-icons">add</span>
+                            <input id="add-task-text" class="add-myday-text" placeholder="Add a task">
+                        </div>
+                        <div id="add-myday-btn" class="add-btn">
+                            <span id="myday-add-task">Add</span>
+                        </div>
+                    </div>
+                    <div id="hr-myday" class="myday-hr"></div>
                 </div>
             </div>
-        </div>
-        <div class="add-tasks">
-            <div id="add-main" class="center-add-task">
-                <span id="settings-cta-closer" class="material-icons">add</span>
-                <input class="add-task-text" placeholder="Add a task">
+
+            <div id="important-content" class="center-important-content">
+                <div class="center-important-head">
+                    <span id="menu-btn" onclick="openNav()" class="material-icons menu">menu</span>
+                    <div id="important-main" class="important">
+                        <p class="important">Important</p>
+                    </div>
+                </div>
+                <div class="add-important-tasks">
+                    <div id="add-important-main" class="center-add-important">
+                        <span id="settings-cta-closer" class="material-icons">add</span>
+                        <input class="add-important-text" placeholder="Add a task">
+                    </div>
+                    <div id="hr-important" class="important-hr"></div>
+                </div>
             </div>
-            <div id="hr-line" class="hr-tags"></div>
         </div>
     </div>
 
