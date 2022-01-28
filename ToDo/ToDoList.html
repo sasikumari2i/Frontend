@@ -50,17 +50,24 @@
                         lightbulb</span>Suggestions
                     </div>
                 </div>
+
                 <div class="add-myday-tasks">
                     <div id="myday-add-btn" class="center-add-myday">
-                        <div id="add-main" class="add-input-myday">
+                        <form id="new-myday-task">
+                            <input type="text" id="new-task-input" class="add-myday-text" placeholder="Add a task" />
+                            <input type="submit" id="new-task-submit" value="Add">
+                        </form>
+                        <!-- <div id="add-main" class="add-input-myday">
                             <span id="settings-cta-closer" class="material-icons">add</span>
                             <input id="add-task-text" class="add-myday-text" placeholder="Add a task">
                         </div>
                         <div id="add-myday-btn" class="add-btn">
                             <span id="myday-add-task">Add</span>
-                        </div>
+                        </div>-->
                     </div>
-                    <div id="hr-myday" class="myday-hr"></div>
+                    <div id="tasks" class="myday-hr">
+                        <span id="circle_icon" class="material-icons circle" style="display: none;">circle</span>
+                    </div>
                 </div>
             </div>
 

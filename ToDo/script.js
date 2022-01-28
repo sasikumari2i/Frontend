@@ -1,12 +1,41 @@
-var i = 0;
-for (i = 1; i <= 10; i++) {
-    document.getElementById('hr-myday').innerHTML += "<hr><div></div>";
-}
+window.addEventListener('load', () => {
 
-var i = 0;
-for (i = 1; i <= 10; i++) {
-    document.getElementById('hr-important').innerHTML += "<hr><div></div>";
-}
+    const task_div = document.querySelector("#tasks");
+    var mydayArr = [];
+    for (var i = 1; i <= 10; i++) {
+        const task_add = document.createElement("div");
+        task_add.classList.add("center-add-myday");
+        task_add.style.padding = "2px 5px 2px 5px";
+        task_add.style.marginLeft = "-2px";
+        const myday_id = "myday" + i;
+        mydayArr[i - 1] = myday_id;
+        task_add.id = myday_id;
+        task_add.innerHTML += "<hr>";
+        task_div.appendChild(task_add);
+    }
+
+    const form = document.querySelector('#new-myday-task');
+    const input = document.querySelector('#new-task-input');
+    const submit_btn = document.querySelector('#new-task-submit');
+    let task_insert;
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const task = input.value;
+        for (var i = 0; i < mydayArr.length; i++) {
+            task_insert = document.getElementById(mydayArr[i]);
+            if (task_insert.innerText == "") {
+                task_insert.innerText = task;
+                task_insert.innerHTML += "<p>Tasks</p>";
+                break;
+            }
+        }
+        task_details = document.getElementById('settings-menu')
+        task_insert.addEventListener('click', () => {
+            setList.classList.add('set-btn');
+        })
+        input.value = "";
+    })
+})
 
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
@@ -54,7 +83,7 @@ openMyday.addEventListener('click', () => {
     document.getElementById('important-content').style.display = "none";
 })
 
-const inputAdd = document.getElementById('add-task-text')
+/*const inputAdd = document.getElementById('add-task-text')
 inputAdd.addEventListener('focusin', () => {
     document.getElementById('add-myday-btn').style.display = "flex";
 })
@@ -62,4 +91,4 @@ inputAdd.addEventListener('focusin', () => {
 const inputFocusOut = document.getElementById('add-task-text')
 inputAdd.addEventListener('focusout', () => {
     document.getElementById('add-myday-btn').style.display = "none";
-})
+})*/
