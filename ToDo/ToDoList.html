@@ -5,26 +5,42 @@
 <head>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
     <div class="head-container">
-        <span class="material-icons">apps</span>
+        <span class="material-icons-outlined">apps</span>
         <span class="title">To Do</span>
-        <span class="material-icons search">search</span><input class="search-text">
+        <span class="material-icons-outlined search">search</span><input class="search-text">
         <div class="head-right">
-            <span id="settings-cta" class="material-icons">settings</span>
-            <span class="material-icons">question_mark</span>
-            <span class="material-icons">campaign</span>
-            <span class="material-icons">P</span>
+            <span id="settings-cta" class="material-icons-outlined md-36">settings</span>
+            <span class="material-icons-outlined">question_mark</span>
+            <span class="material-icons-outlined">campaign</span>
+            <span class="material-icons-outlined">P</span>
         </div>
     </div>
 
     <div class="center-container">
         <div id="mySidenav" class="sidenav">
-            <span onclick="closeNav()" class="material-icons menu">menu</span>
-            <div id="myday-click" class="left-menu"><span class="material-icons option">light_mode</span>My Day
+            <span onclick="closeNav()" class="material-icons-outlined menu">menu</span>
+            <div class="left-menu">
+                <ul id="left_ul">
+                    <li id="myday-click"><span class="material-icons-outlined">
+                        light_mode</span><span>My Day<span></li>
+                    <li id="important-click"><span class="material-icons-outlined">star_border</span>Important</li>
+                    <li><span class="material-icons-outlined option">calendar_month</span><span class="left-class">Planned</span>
+                    </li>
+                    <li><i class="material-icons-outlined">home</i>Tasks</li>
+                    <li><span class="material-icons-outlined option">perm_identity</span>Assigned to Me</li>
+                    <li><span class="material-icons-outlined">list</span>Assigned to Me</li>
+                    <li><span class="material-icons-outlined option">home</span>Tasks</li>
+                    <li class="left-new-list"><span class="material-icons-outlined">add<input id="new_list" type="text"><span class="material-icons-outlined option">home</span></span>
+                    </li>
+                </ul>
+            </div>
+            <!--<div id="myday-click" class="left-menu"><span class="material-icons option">light_mode</span>My Day
             </div>
             <div id="important-click" class="left-menu"><span class="material-icons option">star_border</span>Important
             </div>
@@ -33,6 +49,13 @@
             <div class="left-menu"><span class="material-icons option">perm_identity</span>Assigned to Me
             </div>
             <div class="left-menu"><span class="material-icons option">home</span>Tasks
+            </div>-->
+            <div class="left-bottom-icons">
+                <span class="material-icons">star_border</span>
+                <span class="material-icons">calendar_month</span>
+                <span class="material-icons">perm_identity</span>
+                <span class="material-icons">home</span>
+                <span class="material-icons-outlined">lightbulb</span>
             </div>
         </div>
 
@@ -65,8 +88,10 @@
                             <span id="myday-add-task">Add</span>
                         </div>-->
                     </div>
+
                     <div id="tasks" class="myday-hr">
                         <span id="circle_icon" class="material-icons circle" style="display: none;">circle</span>
+                        <hr>
                     </div>
                 </div>
             </div>
