@@ -15,7 +15,7 @@
         <span class="title">To Do</span>
         <span class="material-icons-outlined search">search</span><input class="search-text">
         <div class="head-right">
-            <span id="settings-cta" class="material-icons-outlined md-36">settings</span>
+            <span id="settings-cta" class="material-icons-outlined">settings</span>
             <span class="material-icons-outlined">question_mark</span>
             <span class="material-icons-outlined">campaign</span>
             <span class="material-icons-outlined">P</span>
@@ -24,38 +24,28 @@
 
     <div class="center-container">
         <div id="mySidenav" class="sidenav">
-            <span onclick="closeNav()" class="material-icons-outlined menu">menu</span>
+            <span onclick="closeNav()" class="material-icons-outlined">menu</span>
             <div class="left-menu">
                 <ul id="left_ul">
                     <li id="myday-click"><span class="material-icons-outlined">
-                        light_mode</span><span>My Day<span></li>
+                        light_mode</span><span>My Day<span><span id="myday_count"></span></li>
                     <li id="important-click"><span class="material-icons-outlined">star_border</span>Important</li>
-                    <li><span class="material-icons-outlined option">calendar_month</span><span class="left-class">Planned</span>
-                    </li>
-                    <li><i class="material-icons-outlined">home</i>Tasks</li>
-                    <li><span class="material-icons-outlined option">perm_identity</span>Assigned to Me</li>
+                    <li><span class="material-icons-outlined">calendar_month</span>Planned</li>
                     <li><span class="material-icons-outlined">list</span>Assigned to Me</li>
-                    <li><span class="material-icons-outlined option">home</span>Tasks</li>
-                    <li class="left-new-list"><span class="material-icons-outlined">add<input id="new_list" type="text"><span class="material-icons-outlined option">home</span></span>
+                    <li><span class="material-icons-outlined">home</span>Tasks</li>
+                </ul>
+
+                <ul>
+                    <li class="left-new-list"><span class="material-icons-outlined">add<input id="new_list" type="text"><span class="material-icons-outlined">group</span></span>
                     </li>
                 </ul>
             </div>
-            <!--<div id="myday-click" class="left-menu"><span class="material-icons option">light_mode</span>My Day
-            </div>
-            <div id="important-click" class="left-menu"><span class="material-icons option">star_border</span>Important
-            </div>
-            <div class="left-menu"><span class="material-icons option">calendar_month</span>Planned
-            </div>
-            <div class="left-menu"><span class="material-icons option">perm_identity</span>Assigned to Me
-            </div>
-            <div class="left-menu"><span class="material-icons option">home</span>Tasks
-            </div>-->
             <div class="left-bottom-icons">
-                <span class="material-icons">star_border</span>
-                <span class="material-icons">calendar_month</span>
-                <span class="material-icons">perm_identity</span>
-                <span class="material-icons">home</span>
-                <span class="material-icons-outlined">lightbulb</span>
+                <span class="material-icons-outlined">mail</span>
+                <span class="material-icons-outlined">calendar_month</span>
+                <span class="material-icons-outlined">people_outline</span>
+                <span class="material-icons-outlined">attach_file</span>
+                <span class="material-icons-outlined tick">done</span>
             </div>
         </div>
 
@@ -67,10 +57,13 @@
                         <p class="my-day">My Day</p>
                     </div>
                     <div class="center-head-right">
-                        <span class="material-icons">
+                        <button id="head_button" class="button"><span class="material-icons-outlined">import_export</span class="button-text">Sort</button>
+                        <button id="head_button" class="button"><span class="material-icons-outlined">lightbulb</span class="button-text">Suggestions</button>
+                        <!--<span><span class="material-icons">
                         import_export</span>Sort
+                        </span>
                         <span class="material-icons">
-                        lightbulb</span>Suggestions
+                        lightbulb</span>Suggestions-->
                     </div>
                 </div>
 
@@ -80,17 +73,9 @@
                             <input type="text" id="new-task-input" class="add-myday-text" placeholder="Add a task" />
                             <input type="submit" id="new-task-submit" value="Add">
                         </form>
-                        <!-- <div id="add-main" class="add-input-myday">
-                            <span id="settings-cta-closer" class="material-icons">add</span>
-                            <input id="add-task-text" class="add-myday-text" placeholder="Add a task">
-                        </div>
-                        <div id="add-myday-btn" class="add-btn">
-                            <span id="myday-add-task">Add</span>
-                        </div>-->
                     </div>
 
                     <div id="tasks" class="myday-hr">
-                        <span id="circle_icon" class="material-icons circle" style="display: none;">circle</span>
                         <hr>
                     </div>
                 </div>

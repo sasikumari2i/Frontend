@@ -4,10 +4,6 @@ body {
     border: 1px;
 }
 
-#left_ul li {
-    padding: 0px;
-}
-
 .head-container {
     color: white;
     background-color: #0078d7;
@@ -15,9 +11,137 @@ body {
     font-weight: bold;
 }
 
+
+/*Center Head */
+
+#head_button {
+    font-weight: 500;
+    font-size: 14px;
+    position: relative;
+    padding: 2px 12px;
+    margin-left: 2px;
+    color: #34373d;
+    border: none;
+    height: auto;
+    width: auto;
+    outline: none;
+    background: none;
+}
+
+#head_button .material-icons-outlined {
+    font-size: 20px;
+}
+
+#head_button:hover {
+    background-color: #ededed;
+    ;
+}
+
+
+/*Left Container*/
+
 .sidenav hr {
     width: 100%;
 }
+
+.sidenav {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-weight: 500;
+    position: fixed;
+    /*z-index: 1;*/
+    top: 48px;
+    left: 0;
+    text-align: left;
+    font-size: 14px;
+    background: #F4F4F4;
+    overflow-x: hidden;
+    margin-bottom: auto;
+    /*transition: 0.5s;*/
+}
+
+.sidenav li {
+    padding: 5px;
+    margin-left: -3em;
+    margin-top: 5px;
+    text-decoration: none;
+    color: #34373d;
+    /*color: #767678;*/
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav li:hover {
+    background: #FAFAFA;
+}
+
+.left-bottom-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.left-new-list .material-icons-outlined {
+    margin: 0;
+    color: #767678;
+    font-size: 20px;
+}
+
+.left-bottom-icons .material-icons-outlined:hover {
+    background-color: #ededed;
+}
+
+.left-bottom-icons .material-icons-outlined {
+    margin: 0;
+    color: #767678;
+    font-size: 20px;
+}
+
+.left-bottom-icons .tick {
+    color: #465efc;
+}
+
+
+/*#left_ul li:hover {
+    background: chocolate;
+}*/
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    font-size: 36px;
+}
+
+.left-menu #left_ul li {
+    align-items: center;
+    display: flex;
+    height: 35px;
+}
+
+.left-menu {
+    height: 80%;
+    cursor: pointer;
+}
+
+#left_ul li {
+    padding: 0px;
+}
+
+.left-menu #left_ul li .material-icons-outlined {
+    margin: 0;
+    display: flex;
+    height: 25px;
+    width: 25px;
+    font-size: 20px;
+}
+
+#new_list {
+    align-items: center;
+}
+
+
+/* Left Container Ends */
 
 .head-right {
     float: right;
@@ -27,11 +151,23 @@ body {
     display: none;
 }
 
-.left-menu li {
-    display: flex;
+.sample {
+    padding: 0;
+    margin: 0;
 }
 
+.head-right .material-icons-outlined {
+    font-size: 20px;
+}
+
+
+/*.option {
+    display: flex;
+    color: #595d61b6;
+}*/
+
 .material-icons {
+    width: 5px;
     padding: 10px;
     font-weight: normal;
     color: black;
@@ -46,7 +182,7 @@ body {
 .material-icons-outlined {
     display: flex;
     padding: 8px;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: small;
     color: black;
     cursor: pointer;
@@ -58,10 +194,6 @@ body {
 
 .head-container .material-icons-outlined {
     color: white;
-    cursor: pointer;
-}
-
-.left-menu {
     cursor: pointer;
 }
 
@@ -105,51 +237,9 @@ body {
 
 /*From here*/
 
-.sidenav {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 48px;
-    left: 0;
-    text-align: left;
-    font-size: 14px;
-    background: #f2f8fd;
-    overflow-x: hidden;
-    margin-bottom: auto;
-    /*transition: 0.5s;*/
-    padding-top: 0em;
-}
-
 .right-settings {
     overflow-x: hidden;
     transition: 1s;
-}
-
-.sidenav li {
-    padding: 0;
-    height: 32px;
-    margin-left: -3em;
-    text-decoration: none;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidenav li:hover {
-    color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    font-size: 36px;
-}
-
-#left_ul li:hover {
-    background: chocolate;
 }
 
 .right-container nav {

@@ -27,14 +27,30 @@ window.addEventListener('load', () => {
     }
 
     let task_insert;
+    let count = 0;
     form.addEventListener('submit', (e) => {
         e.preventDefault();
+        count++;
         const task = input.value;
         for (var i = 0; i < mydayArr.length; i++) {
             task_insert = document.getElementById(mydayArr[i]);
+            let comp_circle = document.createElement("span");
+            let samp_div = document.createElement("div");
+            comp_circle.classList.add("material-icons-outlined");
+            comp_circle.innerText = 'circle';
+            myday_tasks = document.getElementsByClassName('center-add-myday');
             if (task_insert.innerText == "") {
-                task_insert.innerText = task;
-                task_insert.innerHTML += "<p>Tasks</p>";
+                //comp_circle.style.className = 'material-icons';
+                //comp_circle.innerText = "circle";
+                //console.log(task_insert);
+                //task_insert.appendChild(comp_circle);
+                //console.log(comp_circle);
+                task_insert.appendChild(samp_div);
+                console.log(task_insert);
+                task_insert.appendChild(comp_circle);
+                task_insert.innerText += task;
+                //task_insert.innerHTML += "<p>Tasks</p>";
+                console.log(task_insert);
                 break;
             }
         }
@@ -53,17 +69,19 @@ window.addEventListener('load', () => {
         const new_ul = document.querySelector('#left_ul');
         const new_li = document.createElement('li');
         const new_mat_icon = document.createElement('span');
-        new_mat_icon.classList.add('material-icons');
+        new_mat_icon.classList.add('material-icons-outlined');
         new_mat_icon.innerText = "list";
         new_ul.appendChild(new_li);
         new_li.appendChild(new_mat_icon);
         const new_task_span = document.createElement('span');
         new_task_span.innerText = left_list;
         new_li.appendChild(new_task_span);
+        add_list_input.value = "";
         //console.log(new_ul);
     })
 
 })
+
 
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
