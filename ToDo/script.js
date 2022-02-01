@@ -1,5 +1,8 @@
 window.addEventListener('load', () => {
 
+    var added_step_tasks = document.querySelector('#step_task');
+    right_container = document.querySelector('#right_task_name');
+    const step_map = new Map();
     const form = document.querySelector('#new-myday-task');
     const input = document.querySelector('#new-task-input');
     const submit_btn = document.querySelector('#new-task-submit');
@@ -14,7 +17,8 @@ window.addEventListener('load', () => {
 
     const task_div = document.querySelector("#tasks");
     var mydayArr = [];
-    for (var i = 1; i <= 8; i++) {
+    for (i = 1; i <= 9; i++) {
+        document.getElementById('hr-important').innerHTML += "<hr><div></div>";
         const task_add = document.createElement("div");
         task_add.classList.add("center-add-myday");
         task_add.style.padding = "2px 5px 2px 5px";
@@ -22,46 +26,48 @@ window.addEventListener('load', () => {
         const myday_id = "myday" + i;
         mydayArr[i - 1] = myday_id;
         task_add.id = myday_id;
+        task_add.innerHTML += "<hr>";
         task_div.appendChild(task_add);
-        task_div.innerHTML += "<hr>";
     }
 
     let task_insert;
-    let count = 0;
     form.addEventListener('submit', (e) => {
         e.preventDefault();
-        count++;
         const task = input.value;
+        step_map.set(task, []);
         for (var i = 0; i < mydayArr.length; i++) {
             task_insert = document.getElementById(mydayArr[i]);
-            let comp_circle = document.createElement("span");
-            let samp_div = document.createElement("div");
-            comp_circle.classList.add("material-icons-outlined");
-            comp_circle.innerText = 'circle';
-            myday_tasks = document.getElementsByClassName('center-add-myday');
             if (task_insert.innerText == "") {
-                //comp_circle.style.className = 'material-icons';
-                //comp_circle.innerText = "circle";
-                //console.log(task_insert);
-                //task_insert.appendChild(comp_circle);
-                //console.log(comp_circle);
-                task_insert.appendChild(samp_div);
-                console.log(task_insert);
-                task_insert.appendChild(comp_circle);
                 task_insert.innerText += task;
-                //task_insert.innerHTML += "<p>Tasks</p>";
-                console.log(task_insert);
+                task_insert.innerHTML += "<p>Tasks</p>";
                 break;
             }
         }
-        task_details = document.getElementById('settings-menu')
-        task_insert.addEventListener('click', () => {
-            setList.classList.add('set-btn');
-        })
         input.value = "";
-        submit_btn.disabled = true;
+        task_details = document.querySelector('#rightnav');
+        task_insert.addEventListener('click', () => {
+            task_details.style.display = "block";
+            right_container.innerText = task;
+            added_step_tasks.innerHTML = "";
+            var st = step_map.get(right_container.innerText);
+            for (var i = 0; i < st.length; i++) {
+                var step_list = document.createElement('li');
+                step_list.innerText = st[i];
+                added_step_tasks.appendChild(step_list);
+                step_task_input.value = "";
+            }
+        })
     })
 
+    const step_task_input = document.querySelector('#step_task_input');
+    step_task_input.addEventListener('change', () => {
+        const sub_task = step_task_input.value;
+        step_map.get(right_container.innerText).push(sub_task);
+        var step_list = document.createElement('li');
+        step_list.innerText = sub_task;
+        added_step_tasks.appendChild(step_list);
+        step_task_input.value = "";
+    })
 
     const add_list_input = document.querySelector('#new_list');
     add_list_input.addEventListener('change', () => {
@@ -77,7 +83,6 @@ window.addEventListener('load', () => {
         new_task_span.innerText = left_list;
         new_li.appendChild(new_task_span);
         add_list_input.value = "";
-        //console.log(new_ul);
     })
 
 })
@@ -86,8 +91,6 @@ window.addEventListener('load', () => {
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
-    /* document.getElementById("add-main").style.marginLeft = "270px";*/
-    /*document.getElementById("hr-line").style.marginLeft = "270px";*/
     document.getElementById("nav-btn").style.display = "none";
     document.getElementById("menu-btn").style.display = "none";
 }
@@ -95,26 +98,24 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
-    /*document.getElementById("add-main").style.marginLeft = "8px";
-    document.getElementById("hr-line").style.marginLeft = "8px";*/
     document.getElementById("nav-btn").style.display = "block";
     document.getElementById("menu-btn").style.display = "block";
 }
 
-const setBtn = document.getElementById('settings-cta')
+/*const setBtn = document.getElementById('settings-cta')
 setList = document.getElementById('settings-menu')
 setBtn.addEventListener('click', () => {
     if (setList.classList.contains('set-btn')) {
-        setList.classList.remove('set-btn');
+                        setList.classList.remove('set-btn');
     } else {
-        setList.classList.add('set-btn');
+                        setList.classList.add('set-btn');
     }
-})
+})*/
 
-const closeRight = document.getElementById('settings-cta-closer')
-closeList = document.getElementById('settings-menu')
+const closeRight = document.getElementById('right_close')
+closeList = document.getElementById('rightnav')
 closeRight.addEventListener('click', () => {
-    closeList.classList.remove('set-btn');
+    closeList.style.display = "none";
 })
 
 const openImportant = document.getElementById('important-click')
@@ -133,7 +134,7 @@ openMyday.addEventListener('click', () => {
 inputAdd.addEventListener('focusin', () => {
     document.getElementById('add-myday-btn').style.display = "flex";
 })
-
+    
 const inputFocusOut = document.getElementById('add-task-text')
 inputAdd.addEventListener('focusout', () => {
     document.getElementById('add-myday-btn').style.display = "none";

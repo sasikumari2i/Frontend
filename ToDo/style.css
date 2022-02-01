@@ -34,7 +34,6 @@ body {
 
 #head_button:hover {
     background-color: #ededed;
-    ;
 }
 
 
@@ -143,6 +142,115 @@ body {
 
 /* Left Container Ends */
 
+
+/*Right container */
+
+.right-settings {
+    height: 80%;
+    overflow-x: hidden;
+    transition: 1s;
+}
+
+.right-container {
+    margin-top: 48px;
+    position: fixed;
+    width: 25%;
+    display: none;
+    padding: 1em;
+    text-decoration: none;
+    background: #F4F4F4;
+    right: -1em;
+    top: 0;
+    height: 100vh;
+    transition: 1s;
+    font-size: 14px;
+}
+
+.right-heading {
+    margin-left: 0;
+    margin-right: 6px;
+    height: 40px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    background: white;
+}
+
+.right-heading .material-icons-outlined {
+    padding-top: 0;
+    font-size: 22px;
+}
+
+#add_step {
+    justify-content: space-between;
+    background: white;
+    margin-right: 6px;
+}
+
+#add_step input {
+    width: 80%;
+    align-items: center;
+    border: none;
+    appearance: none;
+    outline-style: none;
+    height: 40px;
+}
+
+.right-second {
+    background: white;
+    padding: 2.5px;
+    margin-top: 10px;
+    margin-right: 6px;
+}
+
+#right_third {
+    background: white;
+    margin-right: 6px;
+    margin-top: 10px;
+}
+
+#right_third ul {
+    padding-left: 2px;
+}
+
+.right-second .material-icons-outlined {
+    font-size: 15px;
+}
+
+#right_third ul li .material-icons-outlined {
+    font-size: 20px;
+}
+
+.right-second .text-area {
+    padding: 40px;
+    width: 60%;
+    border: none;
+    outline-style: none;
+}
+
+.close {
+    display: inline;
+    float: right;
+    margin-top: 0.5em;
+}
+
+.settings-list {
+    transition: 1s;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.settings-list li {
+    margin-left: -15px;
+    padding: 1em;
+    align-items: center;
+    font-size: 14px;
+}
+
+
+/*right container ends */
+
 .head-right {
     float: right;
 }
@@ -234,56 +342,9 @@ body {
     color: white;
 }
 
-
-/*From here*/
-
-.right-settings {
-    overflow-x: hidden;
-    transition: 1s;
-}
-
-.right-container nav {
-    margin-right: 0;
-    margin-top: 48px;
-    position: fixed;
-    width: 25%;
-    display: none;
-    padding: 1em;
-    text-decoration: none;
-    background: #f2f8fd;
-    right: -1em;
-    top: 0;
-    height: 100vh;
-}
-
 ul {
     list-style-type: none;
     text-decoration: none;
-}
-
-nav.set-btn {
-    display: block;
-    transition: 0.5s;
-}
-
-.close {
-    display: inline;
-    float: right;
-    margin-top: 0.5em;
-}
-
-.settings-list {
-    transition: 1s;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-}
-
-.settings-list li {
-    margin-left: -15px;
-    padding: 1em;
-    align-items: center;
-    font-size: 14px;
 }
 
 .head-right {
@@ -335,7 +396,7 @@ nav.set-btn {
 }
 
 .add-myday-tasks {
-    margin: 0;
+    margin-right: 10px;
 }
 
 .center-add-myday p {

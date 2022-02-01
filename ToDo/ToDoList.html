@@ -59,11 +59,7 @@
                     <div class="center-head-right">
                         <button id="head_button" class="button"><span class="material-icons-outlined">import_export</span class="button-text">Sort</button>
                         <button id="head_button" class="button"><span class="material-icons-outlined">lightbulb</span class="button-text">Suggestions</button>
-                        <!--<span><span class="material-icons">
-                        import_export</span>Sort
-                        </span>
-                        <span class="material-icons">
-                        lightbulb</span>Suggestions-->
+
                     </div>
                 </div>
 
@@ -74,9 +70,8 @@
                             <input type="submit" id="new-task-submit" value="Add">
                         </form>
                     </div>
-
                     <div id="tasks" class="myday-hr">
-                        <hr>
+
                     </div>
                 </div>
             </div>
@@ -99,21 +94,55 @@
         </div>
     </div>
 
-    <div class="right-container">
-        <nav id="settings-menu" class="right-settings">
-            <span id="settings-cta-closer" class="material-icons close">close</span>
-            <h2>Settings</h2>
-            <h3>General</h3>
-            <ul class="settings-list">
-                <li>Confirm before deleting</li>
-                <li>Add new tasks on top</li>
-                <li>Move starred tasks to top</li>
-                <li>Play completion sound</li>
-                <li>Show right-click menus</li>
-                <li>Turn on reminder notifications</li>
-                <li>Show tasks that seems important in My Day</li>
+    <div id="rightnav" class="right-container">
+        <div id="right_head" class="right-heading">
+            <span class="material-icons-outlined">circle</span>
+            <span id="right_task_name"></span>
+            <span class="material-icons-outlined">star_outline</span>
+        </div>
+        <div class="step-task">
+            <ul id="step_task">
+
             </ul>
-        </nav>
+        </div>
+        <div id="add_step">
+            <span class="material-icons-outlined">add</span>
+            <input type="text" id="step_task_input" placeholder="Add step">
+        </div>
+        <div id="right_second" class="right-second">
+            <span class="material-icons-outlined">light_mode</span>
+            <span>Added to My Day</span>
+        </div>
+        <div id="right_third">
+            <ul>
+                <li><span class="material-icons-outlined">notifications</span>
+                    <span>Remind me</span></li>
+                <li><span class="material-icons-outlined">calendar_month</span>
+                    <span>Add due date</span></li>
+                <li><span class="material-icons-outlined">event_repeat</span>
+                    <span>Repeat</span></li>
+            </ul>
+        </div>
+
+        <div id="right_fourth" class="right-second">
+            <span class="material-icons-outlined">local_offer</span>
+            <span>Pick a Category</span>
+        </div>
+
+        <div id="right_fifth" class="right-second">
+            <span class="material-icons-outlined">attach_file</span>
+            <span>Add File</span>
+        </div>
+
+        <div id="right_sixth" class="right-second">
+            <textarea class="text-area" placeholder="Add note"></textarea>
+        </div>
+
+        <div class="left-bottom-icons">
+            <span id="right_close" class="material-icons-outlined">drive_file_move</span>
+            <span><p>Created Today</p></span>
+            <span class="material-icons-outlined">delete</span>
+        </div>
     </div>
 
 </body>
