@@ -27,12 +27,22 @@
             <span onclick="closeNav()" class="material-icons-outlined">menu</span>
             <div class="left-menu">
                 <ul id="left_ul">
-                    <li id="myday-click"><span class="material-icons-outlined">
-                        light_mode</span><span>My Day<span><span id="myday_count"></span></li>
-                    <li id="important-click"><span class="material-icons-outlined">star_border</span>Important</li>
-                    <li><span class="material-icons-outlined">calendar_month</span>Planned</li>
-                    <li><span class="material-icons-outlined">list</span>Assigned to Me</li>
-                    <li><span class="material-icons-outlined">home</span>Tasks</li>
+                    <li><i class="material-icons-outlined">
+                        light_mode</i>
+                        <div id="My Day" class="clicking-class">My Day</div><span id="myday_count" class="count"></span></li>
+                    <li><i class="material-icons-outlined">star_border</i>
+                        <div id="Important" class="clicking-class">Important</div>
+                        <span id="important_count" class="count"></span>
+                    </li>
+                    <li><i class="material-icons-outlined">calendar_month</i>
+                        <div id="Planned" class="clicking-class">Planned</div>
+                    </li>
+                    <li><i class="material-icons-outlined">list</i>
+                        <div id="Assigned" class="clicking-class">Assigned to Me</div>
+                    </li>
+                    <li><i class="material-icons-outlined">home</i>
+                        <div id="Tasks" class="clicking-class">Tasks</div><span id="tasks_count" class="count"></span>
+                    </li>
                 </ul>
 
                 <ul>
@@ -54,12 +64,12 @@
                 <div class="center-myday-head">
                     <span id="nav-btn" onclick="openNav()" class="material-icons menu">menu</span>
                     <div id="main" class="my-day">
-                        <p class="my-day">My Day</p>
+                        <!--<p class="my-day">My Day</p>-->
+                        <p id="title" class="my-day">My Day</p>
                     </div>
-                    <div class="center-head-right">
+                    <div id="myday_right_menu" class="center-head-right">
                         <button id="head_button" class="button"><span class="material-icons-outlined">import_export</span class="button-text">Sort</button>
                         <button id="head_button" class="button"><span class="material-icons-outlined">lightbulb</span class="button-text">Suggestions</button>
-
                     </div>
                 </div>
 
@@ -70,13 +80,13 @@
                             <input type="submit" id="new-task-submit" value="Add">
                         </form>
                     </div>
-                    <div id="tasks" class="myday-hr">
-
+                    <div id="myday_tasks" class="myday-hr">
+                    
                     </div>
                 </div>
             </div>
 
-            <div id="important-content" class="center-important-content">
+            <!--<div id="important-content" class="center-important-content">
                 <div class="center-important-head">
                     <span id="menu-btn" onclick="openNav()" class="material-icons menu">menu</span>
                     <div id="important-main" class="important">
@@ -88,9 +98,11 @@
                         <span id="settings-cta-closer" class="material-icons">add</span>
                         <input class="add-important-text" placeholder="Add a task">
                     </div>
-                    <div id="hr-important" class="important-hr"></div>
+                    <div id="important_tasks" class="important-hr">
+
+                    </div>
                 </div>
-            </div>
+            </div>-->
         </div>
     </div>
 
