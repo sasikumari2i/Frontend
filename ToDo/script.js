@@ -46,17 +46,31 @@ openMyday.addEventListener('click', () => {
 })*/
 
 
+window.addEventListener('load' ,() => {
+
 const task_count_dom = document.querySelector('#tasks_count');
-    const myday_count_dom = document.querySelector('#myday_count');
-    const important_count_dom = document.querySelector('#important_count');
+const myday_count_dom = document.querySelector('#myday_count');
+const important_count_dom = document.querySelector('#important_count');
+let total_myday_count = 0;
+let total_important_count = 0;
 const tasks_arr = [];
+
+
+
 document.addEventListener('click', function(e) {
     const tasklists = document.querySelector('#myday_tasks');
     if (e.target.classList.contains("clicking-class")) {
         tasklists.innerHTML = "";
     }
+    
     if(0 != tasks_arr.length) {
         task_count_dom.innerHTML = tasks_arr.length;
+        if(0 != total_myday_count) {
+            myday_count_dom.innerHTML = total_myday_count; 
+        }
+        if(0 != total_important_count) {
+            important_count_dom.innerHTML = total_important_count; 
+        }
     }
     if (e.target.classList.contains("clicking-class")) {
         const title = document.getElementById(e.target.id).innerText;
@@ -70,14 +84,6 @@ document.addEventListener('click', function(e) {
         }
     }
 });
-
-/*
- * Count for tasks
- */
-
-count_tasks = tasks_arr.length;  
-  
-console.log(tasks_arr);
 
 /*
  * Adding Tasks
@@ -103,7 +109,13 @@ myday_form.addEventListener('submit', (e) => {
         taskname : task_elem
     }
     tasks_arr.push(task);
+    for(let total_counts of tasks_arr) {
+        if(title == total_counts.id) {
+            count++;
+        }
+    }
     input.value ="";
+    console.log(task);
 })
 
 
@@ -228,7 +240,6 @@ add_list_input.addEventListener('change', () => {
     //const new_task_span = document.createElement('span');
     //new_li.appendChild(new_task_span);
     add_list_input.value = "";
-    console.log(new_ul);
 })
 
 
@@ -402,6 +413,7 @@ setBtn.addEventListener('click', () => {
 })*/
 
 /*const inputAdd = document.getElementById('add-task-text')
+
 inputAdd.addEventListener('focusin', () => {
     document.getElementById('add-myday-btn').style.display = "flex";
 })
@@ -410,3 +422,6 @@ const inputFocusOut = document.getElementById('add-task-text')
 inputAdd.addEventListener('focusout', () => {
     document.getElementById('add-myday-btn').style.display = "none";
 })*/
+
+
+});
