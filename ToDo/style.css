@@ -184,6 +184,43 @@ body {
     background: white;
 }
 
+#task-submit-row {  
+    width: 100%;
+    margin: auto; 
+    border: 1px solid black;
+}
+
+.task-input-submit {
+    background: none;
+    border: none;
+    font-weight: 550;
+}
+
+#task-input {
+    display: flex;
+    justify-content: space-between;
+}
+
+#step_task {
+    /*display: flex;*/
+    margin: 0;
+    padding: 10px;
+    justify-content: space-between;
+    background: white;
+    margin-right: 6px;
+}
+
+.important-icon {
+    float: right;
+}
+
+.sub-task {
+    margin-left: -40px;
+    padding: 10px;
+    background: white;
+    margin-right: 6px;
+}
+
 .right-heading .material-icons-outlined {
     padding-top: 0;
     font-size: 22px;
@@ -416,6 +453,36 @@ ul {
     border-radius: 4px;
     padding: 8px;
     border: 1px solid #ededed;
+}
+
+.task-input-submit {
+    display: none;
+}
+
+.submit-task-display {
+    display: block;
+}
+
+#completed_tasks {
+    display: none;
+}
+
+#new-task-submit {
+    background: none;
+    border: none;
+    font-weight: 550;
+    float: right;
+    padding: 10px;   
+}
+
+.tasks {
+    margin:0;
+    padding-left: 10px;
+    font-size: normal;
+}
+
+.tasks .material-icons-outlined {
+    font-size: 20px;
 }
 
 .add-myday-tasks {

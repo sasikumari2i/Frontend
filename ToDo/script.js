@@ -108,6 +108,16 @@ completed_task_events.addEventListener('click', (e) => {
     }
 });
 
+
+const show_submit_btn = document.querySelector('#new-task-input');
+document.addEventListener('click' , (e) => {
+    if(e.target.id == "new-task-input") {
+        document.querySelector('#submit_task_show').classList.add('submit-task-display');
+    } else {
+        document.querySelector('#submit_task_show').classList.remove('submit-task-display');
+    }
+})
+
 /*
  * Adding Tasks
  */
@@ -121,7 +131,8 @@ myday_form.addEventListener('submit', (e) => {
     const task_elem = document.createElement('div');
     task_elem.innerHTML = "<i class='material-icons-outlined circle'>radio_button_unchecked</i>"
     task_elem.innerHTML += todo_task;
-    task_elem.innerHTML += "<i class='material-icons-outlined'>star</i>"
+    task_elem.innerHTML += "<i class='material-icons-outlined important-icon'>star_outlined</i>"
+    task_elem.innerHTML += "<hr>";
     task_elem.classList.add('tasks');
     task_elem.id = todo_task;
     step_map.set(todo_task, []);
@@ -170,6 +181,7 @@ tasklists.addEventListener('click', (e) => {
         var st = step_map.get(right_container.innerText);
         for (var i = 0; i < st.length; i++) {
             var step_list = document.createElement('li');
+            //step_list.classList.add('sub-task');
             step_list.innerText = st[i];
             added_step_tasks.appendChild(step_list);
             step_task_input.value = "";

@@ -75,9 +75,17 @@
 
                 <div class="add-myday-tasks">
                     <div id="myday-add-btn" class="center-add-myday">
-                        <form id="new-myday-task">
-                            <input type="text" id="new-task-input" class="add-myday-text" placeholder="Add a task" />
-                            <input type="submit" id="new-task-submit" value="Add">
+                        <form id="new-myday-task" autocomplete="off">
+                            <div id="task-input">
+                                <i class="material-icons-outlined">add</i>
+                                <input type="text" id="new-task-input" class="add-myday-text" placeholder="Add a task" />
+                            </div>
+                            <div id="submit_task_show" class="task-input-submit">
+                                <i class="material-icons-outlined">calendar_month</i>
+                                <i class="material-icons-outlined">notifications</i>
+                                <i class="material-icons-outlined">event_repeat</i>
+                                <input type="submit" id="new-task-submit" value="Add">
+                            </div>
                         </form>
                     </div>
                     <div id="myday_tasks" class="myday-hr">
