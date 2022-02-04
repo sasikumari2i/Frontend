@@ -15,24 +15,24 @@
         <span class="title">To Do</span>
         <span class="material-icons-outlined search">search</span><input class="search-text">
         <div class="head-right">
-            <span id="settings-cta" class="material-icons-outlined">settings</span>
-            <span class="material-icons-outlined">question_mark</span>
-            <span class="material-icons-outlined">campaign</span>
-            <span class="material-icons-outlined">P</span>
+            <i id="settings-cta" class="material-icons-outlined">settings</i>
+            <i class="material-icons-outlined">question_mark</i>
+            <i class="material-icons-outlined">campaign</i>
+            <i class="material-icons-outlined">P</i>
         </div>
     </div>
 
     <div class="center-container">
         <div id="mySidenav" class="sidenav">
-            <span onclick="closeNav()" class="material-icons-outlined">menu</span>
+            <i id="close_left" class="material-icons-outlined">menu</i>
             <div class="left-menu">
                 <ul id="left_ul">
                     <li><i class="material-icons-outlined">
                         light_mode</i>
-                        <div id="My Day" class="clicking-class">My Day</div><span id="myday_count" class="count"></span></li>
+                        <div id="My Day" class="clicking-class">My Day</div><span class="count"></span></li>
                     <li><i class="material-icons-outlined">star_border</i>
                         <div id="Important" class="clicking-class">Important</div>
-                        <span id="important_count" class="count"></span>
+                        <span class="count"></span>
                     </li>
                     <li><i class="material-icons-outlined">calendar_month</i>
                         <div id="Planned" class="clicking-class">Planned</div>
@@ -44,26 +44,25 @@
                         <div id="Tasks" class="clicking-class">Tasks</div><span id="tasks_count" class="count"></span>
                     </li>
                 </ul>
-
-                <ul>
+                <ul id="left-list-input">
                     <li class="left-new-list"><span class="material-icons-outlined">add<input id="new_list" type="text"><span class="material-icons-outlined">group</span></span>
                     </li>
                 </ul>
             </div>
             <div class="left-bottom-icons">
-                <span class="material-icons-outlined">mail</span>
-                <span class="material-icons-outlined">calendar_month</span>
-                <span class="material-icons-outlined">people_outline</span>
-                <span class="material-icons-outlined">attach_file</span>
-                <span class="material-icons-outlined tick">done</span>
+                <i class="material-icons-outlined">mail</i>
+                <i class="material-icons-outlined">calendar_month</i>
+                <i class="material-icons-outlined">people_outline</i>
+                <i class="material-icons-outlined">attach_file</i>
+                <i class="material-icons-outlined tick">done</i>
             </div>
         </div>
 
         <div id="main" class="center-content">
             <div id="myday-content" class="center-myday-content">
                 <div class="center-myday-head">
-                    <span id="nav-btn" onclick="openNav()" class="material-icons menu">menu</span>
-                    <div id="main" class="my-day">
+                    <i id="nav-btn" class="material-icons menu">menu</i>
+                    <div id="main" class="my-day my-day-initial">
                         <!--<p class="my-day">My Day</p>-->
                         <p id="title" class="my-day">My Day</p>
                     </div>
@@ -88,11 +87,12 @@
                             </div>
                         </form>
                     </div>
-                    <div id="myday_tasks" class="myday-hr">
-                    
-                    </div>
-                    <div id="completed_tasks" class="completed">
-                        <h2>Completed</h2>
+                    <div class="task-contents">
+                        <div id="myday_tasks" class="myday-hr">
+                        </div>
+                        <div id="completed_tasks" class="completed">
+                            <h2>Completed</h2>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -100,10 +100,11 @@
     </div>
 
     <div id="rightnav" class="right-container">
+        <div id="right-menus">
         <div id="right_head" class="right-heading">
-            <span class="material-icons-outlined">circle</span>
+            <i class="material-icons-outlined">circle</i>
             <span id="right_task_name"></span>
-            <span class="material-icons-outlined">star_outline</span>
+            <i class="material-icons-outlined">star_outline</i>
         </div>
         <div class="step-task">
             <ul id="step_task">
@@ -111,42 +112,42 @@
             </ul>
         </div>
         <div id="add_step">
-            <span class="material-icons-outlined">add</span>
+            <i class="material-icons-outlined">add</i>
             <input type="text" id="step_task_input" placeholder="Add step">
         </div>
         <div id="right_second" class="right-second">
-            <span class="material-icons-outlined">light_mode</span>
+            <i class="material-icons-outlined">light_mode</i>
             <span>Added to My Day</span>
         </div>
         <div id="right_third">
             <ul>
-                <li><span class="material-icons-outlined">notifications</span>
+                <li><i class="material-icons-outlined">notifications</i>
                     <span>Remind me</span></li>
-                <li><span class="material-icons-outlined">calendar_month</span>
+                <li><i class="material-icons-outlined">calendar_month</i>
                     <span>Add due date</span></li>
-                <li><span class="material-icons-outlined">event_repeat</span>
+                <li><i class="material-icons-outlined">event_repeat</i>
                     <span>Repeat</span></li>
             </ul>
         </div>
 
         <div id="right_fourth" class="right-second">
-            <span class="material-icons-outlined">local_offer</span>
+            <i class="material-icons-outlined">local_offer</i>
             <span>Pick a Category</span>
         </div>
 
         <div id="right_fifth" class="right-second">
-            <span class="material-icons-outlined">attach_file</span>
+            <i class="material-icons-outlined">attach_file</i>
             <span>Add File</span>
         </div>
 
         <div id="right_sixth" class="right-second">
             <textarea class="text-area" placeholder="Add note"></textarea>
         </div>
-
+        </div>
         <div class="left-bottom-icons">
-            <span id="right_close" class="material-icons-outlined">drive_file_move</span>
+            <i id="right_close" class="material-icons-outlined">drive_file_move</i>
             <span><p>Created Today</p></span>
-            <span class="material-icons-outlined">delete</span>
+            <i class="material-icons-outlined">delete</i>
         </div>
     </div>
 
