@@ -25,11 +25,16 @@ left_menu_panel.addEventListener("click", function (e) {
   if (e.target.classList.contains("clicking-class")) {
     const title = document.getElementById(e.target.id).innerText;
     document.getElementById("title").innerText = title;
+    let task_count = taskCounts(title);
     for (let add_task of tasks_arr) {
       if (
         title === add_task.id &&
         !add_task.taskname.classList.contains("completed")
       ) {
+        let parent = document.getElementById(add_task.taskname.id);
+        let children = parent.children[0];
+        children.innerHTML = task_count;
+        console.log(children);
         tasklists.appendChild(add_task.taskname);
       } else if (
         title == "Tasks" &&
@@ -196,6 +201,9 @@ myday_form.addEventListener("submit", (e) => {
   }
   let count = taskCounts(document.getElementById("title").innerText);
   console.log(count);
+  setTimeout(console.log('Hi'),5000);
+  console.log("hello");
+  setTimeout(console.log('Hello'),10000);
 });
 
 /*
@@ -272,6 +280,9 @@ add_list_input.addEventListener("change", () => {
   new_list_class.id = add_list_input;
   new_list_class.classList.add("clicking-class");
   new_list_class.innerText = left_list;
+  span_elem = document.createElement("span");
+  span_elem.classList.add("count");
+  new_li.appendChild(span_elem);
   new_li.appendChild(new_mat_icon);
   new_li.appendChild(new_list_class);
   new_ul.appendChild(new_li);

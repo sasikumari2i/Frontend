@@ -11,37 +11,42 @@
 
 <body>
     <div class="head-container">
-        <span class="material-icons-outlined">apps</span>
-        <span class="title">To Do</span>
-        <span class="material-icons-outlined search">search</span><input class="search-text">
+       <div class="header-title"><span class="material-icons-outlined">apps</span>
+        <span class="title">To Do</span></div>
+        <!--<div class="search-box"><span class="material-icons-outlined search">search</span>
+        <input class="search-text"><i class="material-icons-outlined search">search</i>-->
+        <div class="search-box"><button><img src = "search.svg" alt="search"/></button></div>
         <div class="head-right">
-            <i id="settings-cta" class="material-icons-outlined">settings</i>
-            <i class="material-icons-outlined">question_mark</i>
-            <i class="material-icons-outlined">campaign</i>
-            <i class="material-icons-outlined">P</i>
+            <img class="header-icons" src = "icons8-settings(1).svg" alt="settings"/>
+            <img class="header-icons" src = "qmark1.png" alt="questionmark"/>
+            <img class="header-icons" src = "megaphone.png" alt="what's new"/>
+            <!--<i id="settings-cta" class="material-icons-outlined">settings</i>-->
+            <!--<i class="material-icons-outlined">question_mark</i>-->
+            <!--<i class="material-icons-outlined">new</i>-->
+            <span class="header-icons">SK</span>
         </div>
     </div>
 
-    <div class="center-container">
+    <!--<div class="center-container">-->
         <div id="mySidenav" class="sidenav">
-            <i id="close_left" class="material-icons-outlined">menu</i>
+            <img id="close_left" class="close-menu" src = "icons8-menu(1).svg" alt="menu"/>
+            <!--<i id="close_left" class="material-icons-outlined">menu</i>-->
             <div class="left-menu">
                 <ul id="left_ul">
                     <li><i class="material-icons-outlined">
                         light_mode</i>
-                        <div id="My Day" class="clicking-class">My Day</div><span class="count"></span></li>
+                        <div id="My Day" class="clicking-class">My Day<span class="count"></span></div></li>
                     <li><i class="material-icons-outlined">star_border</i>
-                        <div id="Important" class="clicking-class">Important</div>
-                        <span class="count"></span>
+                        <div id="Important" class="clicking-class">Important<span class="count"></span></div>
                     </li>
                     <li><i class="material-icons-outlined">calendar_month</i>
-                        <div id="Planned" class="clicking-class">Planned</div>
+                        <div id="Planned" class="clicking-class">Planned<span class="count"></span></div>
                     </li>
                     <li><i class="material-icons-outlined">list</i>
-                        <div id="Assigned" class="clicking-class">Assigned to Me</div>
+                        <div id="Assigned" class="clicking-class">Assigned to Me<span class="count"></span></div>
                     </li>
                     <li><i class="material-icons-outlined">home</i>
-                        <div id="Tasks" class="clicking-class">Tasks</div><span id="tasks_count" class="count"></span>
+                        <div id="Tasks" class="clicking-class">Tasks<span class="count"></span></div>
                     </li>
                 </ul>
                 <ul id="left-list-input">
@@ -91,13 +96,13 @@
                         <div id="myday_tasks" class="myday-hr">
                         </div>
                         <div id="completed_tasks" class="completed">
-                            <h2>Completed</h2>
+                            <h2 id="completed_heading">Completed</h2>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    <!--</div>-->
 
     <div id="rightnav" class="right-container">
         <div id="right-menus">
