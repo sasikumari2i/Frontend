@@ -1,11 +1,18 @@
 /*
  * Close Right Side Navigation
  */
-const closeRight = document.getElementById("right_close");
-closeRight.addEventListener("click", () => {
+$("#right_close").click(function(){
+  //closeList = document.querySelector("#rightnav");
+  //closeList.style.display = "none";
+  $('#rightnav').hide();
+});
+
+/*const closeRight = document.getElementById("right_close");
+closeRight.addEventListener("click", closeRightNavigation); 
+function closeRightNavigation() {
   closeList = document.querySelector("#rightnav");
   closeList.style.display = "none";
-});
+}*/
 
 /*
  * Selecting the Task menu from Left side menu.
@@ -18,33 +25,41 @@ const completed_arr = [];
 const left_menu_panel = document.querySelector("#left_ul");
 const tasklists = document.querySelector("#myday_tasks");
 const show_completed_task = document.querySelector("#completed_tasks");
-left_menu_panel.addEventListener("click", function (e) {
+left_menu_panel.addEventListener("click", leftContainer);
+function leftContainer(e) {
   if (e.target.classList.contains("clicking-class")) {
     tasklists.innerHTML = "";
-  }
-  if (e.target.classList.contains("clicking-class")) {
-    const title = document.getElementById(e.target.id).innerText;
+    show_completed_task.innerHTML = "";
+    let title = document.getElementById(e.target.id).innerText;
     document.getElementById("title").innerText = title;
-    let task_count = taskCounts(title);
-    for (let add_task of tasks_arr) {
-      if (
-        title === add_task.id &&
-        !add_task.taskname.classList.contains("completed")
-      ) {
-        let parent = document.getElementById(add_task.taskname.id);
-        let children = parent.children[0];
-        children.innerHTML = task_count;
-        console.log(children);
-        tasklists.appendChild(add_task.taskname);
-      } else if (
-        title == "Tasks" &&
-        !add_task.taskname.classList.contains("completed")
-      ) {
-        tasklists.appendChild(add_task.taskname);
+    for (let per of tasks_arr) {
+      if (title === per.id) {
+        tasklists.appendChild(per.taskname);
+      } else if (title == "Tasks") {
+        tasklists.appendChild(per.taskname);
       }
     }
   }
-});
+  //let count = 0;
+  let display_comp_task = [];
+  for (let comp_tasks of completed_arr) {
+    if (e.target.id == comp_tasks.id) {
+      display_comp_task.push(comp_tasks.taskname);
+    }
+  }
+  if (display_comp_task.length > 0) {
+    show_completed_task.innerHTML = "<h2 id='completed_heading'>Completed</h2>";
+    for (let completed_tasks of display_comp_task) {
+      show_completed_task.appendChild(completed_tasks);
+    }
+  } else {
+    show_completed_task.innerHTML = "";
+  }
+  var result = tasks_arr.filter(obj => {
+    return obj.id === e.target.id;
+  })
+  console.log(result.length);
+}
 
 /*
  * To count number of tasks
@@ -85,20 +100,22 @@ task_events.addEventListener("click", (e) => {
     completed_arr.push(completed_task);
     const display_completed_tasks = document.querySelector("#completed_tasks");
     if (completed_title_id === completed_task.id) {
+      if (completed_arr.length === 1) {
+        display_completed_tasks.innerHTML +=
+          "<h2 id='completed_heading'>Completed</h2>";
+      }
       display_completed_tasks.appendChild(completed_task_name);
     }
   }
-  let count = taskCounts(document.getElementById("title").innerText);
-  console.log(count);
 });
 
 /*
  * Reinserting Tasks from Completed Task
  */
-let completed_task_events = document.querySelector("#completed_tasks");
-const comp_title = document.querySelector("#title").innerText;
-let reinsert_title_id = "";
+const completed_task_events = document.querySelector("#completed_tasks");
 completed_task_events.addEventListener("click", (e) => {
+  let comp_title = document.querySelector("#title").innerText;
+  let reinsert_title_id = "";
   if (
     e.target.classList.contains("circle") &&
     e.target.parentNode.classList.contains("strike")
@@ -122,15 +139,16 @@ completed_task_events.addEventListener("click", (e) => {
       ) {
         return selected_tasks.id === reinsert_task_name;
       });
-      if (comp_task_arr_index === -1)
+      if (comp_task_arr_index === -1) {
         completed_arr.splice(comp_task_arr_index, 1);
+      }
       const reinsert_task = {
         id: reinsert_title_id,
         taskname: reinsert_task_name,
       };
       tasks_arr.push(reinsert_task);
       const display_reinserted_tasks =
-        document.querySelector("#completed_tasks");
+        document.querySelector("#myday_tasks");
       if (reinsert_title_id === reinsert_task.id) {
         display_reinserted_tasks.appendChild(reinsert_task_name);
       }
@@ -140,9 +158,13 @@ completed_task_events.addEventListener("click", (e) => {
         tasklists.appendChild(reinsert_task_name);
       }
     }
+    const completed_tasks_display = document.querySelector("#completed_tasks");
+    if (completed_arr.length <= 0) {
+      completed_tasks_display.innerHTML = "";
+    }
     reinsert_title_id = "";
-    let count = taskCounts(document.getElementById("title").innerText);
-    console.log(count);
+    //let count = taskCounts(document.getElementById("title").innerText);
+    //console.log(count);
   }
 });
 
@@ -200,10 +222,6 @@ myday_form.addEventListener("submit", (e) => {
     }
   }
   let count = taskCounts(document.getElementById("title").innerText);
-  console.log(count);
-  setTimeout(console.log('Hi'),5000);
-  console.log("hello");
-  setTimeout(console.log('Hello'),10000);
 });
 
 /*
@@ -229,12 +247,18 @@ closeLeft.addEventListener("click", () => {
 /*
  * Adding Title to Right Side details bar
  */
+
+
 const task_details = document.querySelector("#rightnav");
 let added_step_tasks = document.querySelector("#step_task");
-tasklists.addEventListener("click", (e) => {
+let task_click = document.querySelector('#myday_tasks');
+//task_click.addEventListener("click", (e) => {
+$('#rightnav').click(function(){
+  console.log("clicked");
   let task_id = e.target.id;
   if (e.target.classList.contains("tasks")) {
-    task_details.classList.add("submit-task-display");
+    //task_details.classList.add("submit-task-display");
+    task_details.style.display = "block";
     right_container.innerText = task_id;
     added_step_tasks.innerHTML = "";
     let st = step_map.get(right_container.innerText);
@@ -246,6 +270,7 @@ tasklists.addEventListener("click", (e) => {
     }
   }
 });
+//});
 
 /*
  * Adding sub tasks to tasks
@@ -273,18 +298,20 @@ add_list_input.addEventListener("change", () => {
   const left_list = add_list_input.value;
   const new_ul = document.querySelector("#left_ul");
   const new_li = document.createElement("li");
-  const new_list_class = document.createElement("div");
   const new_mat_icon = document.createElement("i");
   new_mat_icon.classList.add("material-icons-outlined");
   new_mat_icon.innerHTML = "list";
-  new_list_class.id = add_list_input;
+  const new_list_class = document.createElement("div");
+  new_list_class.id = left_list;
+  //new_li.id = left_list;
   new_list_class.classList.add("clicking-class");
   new_list_class.innerText = left_list;
   span_elem = document.createElement("span");
   span_elem.classList.add("count");
-  new_li.appendChild(span_elem);
   new_li.appendChild(new_mat_icon);
+  //new_li.innerHTML += left_list;
   new_li.appendChild(new_list_class);
+  new_li.appendChild(span_elem);
   new_ul.appendChild(new_li);
   add_list_input.value = "";
 });

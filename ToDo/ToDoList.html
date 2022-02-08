@@ -4,6 +4,7 @@
 
 <head>
     <script src="script.js" defer></script>
+    <script src="jquery.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -30,27 +31,26 @@
     <div class="center-container">
         <div id="mySidenav" class="sidenav">
             <img id="close_left" class="close-menu" src = "icons8-menu(1).svg" alt="menu"/>
-            <!--<i id="close_left" class="material-icons-outlined">menu</i>-->
             <div class="left-menu">
                 <ul id="left_ul">
                     <li><i class="material-icons-outlined">
                         light_mode</i>
-                        <div id="My Day" class="clicking-class">My Day<span class="count"></span></div></li>
+                        <div id="My Day" class="clicking-class">My Day</div><span class="count"></span></li>
                     <li><i class="material-icons-outlined">star_border</i>
-                        <div id="Important" class="clicking-class">Important<span class="count"></span></div>
+                        <div id="Important" class="clicking-class">Important</div><span class="count"></span>
                     </li>
                     <li><i class="material-icons-outlined">calendar_month</i>
-                        <div id="Planned" class="clicking-class">Planned<span class="count"></span></div>
+                        <div id="Planned" class="clicking-class">Planned</div><span class="count"></span>
                     </li>
                     <li><i class="material-icons-outlined">list</i>
-                        <div id="Assigned" class="clicking-class">Assigned to Me<span class="count"></span></div>
+                        <div id="Assigned" class="clicking-class">Assigned</div><span class="count"></span>
                     </li>
                     <li><i class="material-icons-outlined">home</i>
-                        <div id="Tasks" class="clicking-class">Tasks<span class="count"></span></div>
+                        <div id="Tasks" class="clicking-class">Tasks</div><span class="task_count count"></span>
                     </li>
                 </ul>
                 <ul id="left-list-input">
-                    <li class="left-new-list"><span class="material-icons-outlined">add<input id="new_list" type="text"><span class="material-icons-outlined">group</span></span>
+                    <li class="left-new-list"><span class="material-icons-outlined">add<input id="new_list" type="text"></span><span class="material-icons-outlined">group</span>
                     </li>
                 </ul>
             </div>
@@ -66,7 +66,8 @@
         <div id="main" class="center-content">
             <div id="myday-content" class="center-myday-content">
                 <div class="center-myday-head">
-                    <i id="nav-btn" class="material-icons menu">menu</i>
+                    <!--<i id="nav-btn" class="material-icons menu">menu</i>-->
+                    <img id="nav-btn" class="close-menu" src = "icons8-menu(1).svg" alt="menu"/>
                     <div id="main" class="my-day my-day-initial">
                         <!--<p class="my-day">My Day</p>-->
                         <p id="title" class="my-day">My Day</p>
@@ -95,8 +96,7 @@
                     <div class="task-contents">
                         <div id="myday_tasks" class="myday-hr">
                         </div>
-                        <div id="completed_tasks" class="completed">
-                            <h2 id="completed_heading">Completed</h2>
+                        <div id="completed_tasks" class="completed">            
                         </div>
                     </div>
                 </div>
@@ -109,7 +109,7 @@
         <div id="right_head" class="right-heading">
             <i class="material-icons-outlined">circle</i>
             <span id="right_task_name"></span>
-            <i class="material-icons-outlined">star_outline</i>
+            <i class="material-icons-outlined subtask-title">star_outline</i>
         </div>
         <div class="step-task">
             <ul id="step_task">

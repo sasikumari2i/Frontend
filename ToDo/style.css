@@ -11,6 +11,10 @@ body {
   padding: 10px;
 }
 
+.tasks .circle {
+  padding-left: 15px;
+}
+
 .head-container {
   display: flex;
   justify-content: space-between;
@@ -110,7 +114,7 @@ body {
   align-content: center;
   text-align: center;
   margin-top:15px;
-  margin-left: 10px;
+  margin-left: 3px;
   padding: 6px 4px 4px 6px;
   width: 30px;
   height: 20px;
@@ -124,15 +128,15 @@ body {
 }
 
 .left-menu #left_ul li {
-  /*align-items: center;
+  padding-left: 6px;
   display: flex;
-  height: 35px;*/
+  line-height: 35px;
+  height: 35px;
 }
 
 .left-menu {
   height: 80%;
   cursor: pointer;
-  
 }
 
 #left_ul li {
@@ -149,11 +153,40 @@ body {
   opacity: 0.9;
 }
 
+#new_list {
+  border: none;
+  outline-style: none;
+  appearance: none;
+  width: 169px;
+  height: fit-content;
+  padding: 0;
+  margin-left: 12px;
+  background-color: rgba(244,246,255,0.8);
+}
 
+.bold-on-click {
+  font-weight: bold;
+}
 
+.remove-bold {
+  font-weight: normal;
+}
 
+.left-new-list {
+  display: flex;
+  justify-content: space-between;
+}
 
+.left-list-input {
+  width: 20%;
+  margin: 0;
+  padding: 0;
+}
 
+#nav-btn {
+  margin-top:10px;
+  margin-right: -5px;
+}
 
 .sidenav hr {
   width: 100%;
@@ -185,7 +218,7 @@ body {
 }
 
 .center-content {
-  margin:0;
+  margin-top: -15px;
 }
 
 .sidenav li {
@@ -204,6 +237,8 @@ body {
 }
 
 .left-bottom-icons {
+  margin-bottom: 0;
+  padding-bottom: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -260,6 +295,7 @@ body {
 
 /*Center Head */
 #head_button {
+  line-height: 60px;
   font-weight: 500;
   font-size: 14px;
   position: relative;
@@ -305,14 +341,23 @@ body {
   font-size: 14px;
 }
 
+.subtask-title {
+  float: right;
+}
+
+#right_task_name {
+  align-content: top;
+}
+
 .right-heading {
-  margin-left: 0;
-  margin-right: 6px;
-  height: 40px;
+  line-height: 40px;
   padding-top: 10px;
-  display: flex;
-  justify-content: space-between;
+  margin: 0;
+  height: 40px;
+  /*padding-top: 10px;*/
   background: white;
+  font-size: 16px;
+  align-items: top;
 }
 
 #task-submit-row {
@@ -358,9 +403,30 @@ body {
 }
 
 #add_step {
-  justify-content: space-between;
+  display: flex;
+  /*justify-content: space-between;*/
   background: white;
   margin-right: 6px;
+}
+
+#step_task_input::placeholder {
+   color: #465efc;
+}
+
+#step_task_input {
+  
+}
+
+#right_fourth {
+  color:#34373d;
+}
+
+#right_fifth {
+  color:#34373d;
+  }
+
+#right_third {
+  color:#34373d;
 }
 
 #add_step input {
@@ -372,11 +438,20 @@ body {
   height: 40px;
 }
 
+#right_head {
+  
+}
+
 .right-second {
+  color: #767678;
   background: white;
   padding: 2.5px;
   margin-top: 10px;
   margin-right: 6px;
+}
+
+#right_second {
+  color: #465efc;
 }
 
 #right_third {
@@ -422,6 +497,10 @@ body {
   padding: 1em;
   align-items: center;
   font-size: 14px;
+}
+
+.right-third {
+  color: 
 }
 
 .right-bottom-icons {
@@ -487,6 +566,10 @@ ul {
   text-decoration: none;
 }
 
+.center-myday-content {
+  margin-top:0;
+}
+
 .center-myday-head {
   display: flex;
   width: 100%;
@@ -527,7 +610,8 @@ ul {
 
 .center-add-myday {
   color: #34373d;
-  margin: 0 8px;
+  margin-left:8px;
+  margin-top: 15px;
   border-radius: 4px;
   padding: 8px;
   border: 1px solid #ededed;
@@ -536,6 +620,10 @@ ul {
 
 .tasks-hover:hover {
   background: #f4f4f4;
+}
+
+.tasks {
+  align-content: center;
 }
 
 .center-add-myday input {
