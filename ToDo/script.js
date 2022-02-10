@@ -1,24 +1,16 @@
 $(document).ready(function () {
-  const task_count_dom = document.querySelector("#tasks_count");
-  const myday_count_dom = document.querySelector("#myday_count");
-  const important_count_dom = document.querySelector("#important_count");
   const tasks_arr = [];
   const completed_arr = [];
   const left_menu_panel = $("#left_ul");
   const tasklists = $("#myday_tasks");
   const show_completed_task = $("#completed_tasks");
-  const show_submit_btn = document.querySelector("#new-task-input");
   const add_list_input = $("#new_list");
   const right_container = $("#right_task_name");
   const step_task_input = $("#step_task_input");
   const task_details = $("#rightnav");
   let added_step_tasks = $("#step_task");
   const step_map = new Map();
-  const myday_form = document.querySelector("#new-myday-task");
-
   const input = document.querySelector("#new-task-input");
-  const completed_task_events = document.querySelector("#completed_tasks");
-  //let task_click = document.querySelector("#myday_tasks");
 
   /*
    * Close Right Side Navigation
@@ -61,9 +53,6 @@ $(document).ready(function () {
         show_completed_task.html("");
       }
     }
-    /*var result = tasks_arr.filter((obj) => {
-      return obj.id === e.target.id;
-    });*/
   });
 
   /*
@@ -83,11 +72,8 @@ $(document).ready(function () {
       mat_icon.text("check_circle");
       mat_icon.css("color", "blue");
       let title = $("#title").text();
-      let isAvailable = tasks_arr.findIndex(function (
-        selected_task,
-        task_index
-      ) {
-        if (selected_task.taskname.id === completed_task_name.attr("id")) {
+      let isAvailable = tasks_arr.findIndex(function (selected_task,task_index) {
+        if (selected_task.taskname.attr('id') === completed_task_name.attr("id")) {
           tasks_arr.splice(task_index, 1);
           return true;
         }
@@ -101,7 +87,7 @@ $(document).ready(function () {
       if (completed_title_id === completed_task.id) {
         if (completed_arr.length === 1) {
           display_completed_tasks.html(
-              "<h2 id='completed_heading'>Completed</h2>"
+            "<h2 id='completed_heading'>Completed</h2>"
           );
         }
         display_completed_tasks.append(completed_task_name);
@@ -109,15 +95,20 @@ $(document).ready(function () {
     }
     let completed_title_id = $("#title").text();
     let count = tasks_arr.filter((obj) => {
-      return ((obj.id === completed_title_id) && !(obj.taskname.hasClass('completed')));
+      return (
+        obj.id === completed_title_id && !obj.taskname.hasClass("completed")
+      );
     });
 
     var listItems = $("#left_ul li");
-    listItems.each(function(idx, li) {
+    listItems.each(function (idx, li) {
       var product = $(li);
-      if(product.children('div').attr('id') === completed_title_id) {
-        product.children('div').next().text(count.length);
+      if (product.children("div").attr("id") === completed_title_id) {
+        product.children("div").next().text(count.length);
       }
+      if (product.children("div").attr("id") === "Tasks") {
+        product.children("div").next().text(tasks_arr.length);
+      } 
     });
   });
 
@@ -148,7 +139,6 @@ $(document).ready(function () {
         reinsert_task_name.removeClass("completed");
         reinsert_task_name.children().first().text("radio_button_unchecked");
         reinsert_task_name.children().first().css("color", "black");
-
         let isAvailable = completed_arr.findIndex(function (
           reinserted_task,
           i
@@ -179,6 +169,23 @@ $(document).ready(function () {
         reinsert_title_id = "";
       }
     }
+    let completed_title_id = $("#title").text();
+    let count = tasks_arr.filter((obj) => {
+      return (
+        obj.id === completed_title_id && !obj.taskname.hasClass("completed")
+      );
+    });
+
+    var listItems = $("#left_ul li");
+    listItems.each(function (idx, li) {
+      var product = $(li);
+      if (product.children("div").attr("id") === completed_title_id) {
+        product.children("div").next().text(count.length);
+      }
+      if (product.children("div").attr("id") === "Tasks") {
+        product.children("div").next().text(tasks_arr.length);
+      }
+    });
   });
 
   document.addEventListener("click", (e) => {
@@ -226,19 +233,24 @@ $(document).ready(function () {
           display_tasklists.append(per.taskname);
         }
       }
-    }
-    let completed_title_id = $("#title").text();
-    let count = tasks_arr.filter((obj) => {
-      return ((obj.id === completed_title_id) && !(obj.taskname.hasClass('completed')));
-    });
+      let completed_title_id = $("#title").text();
+      let count = tasks_arr.filter((obj) => {
+        return (
+          obj.id === completed_title_id && !obj.taskname.hasClass("completed")
+        );
+      });
 
-    var listItems = $("#left_ul li");
-    listItems.each(function(idx, li) {
-      var product = $(li);
-      if(product.children('div').attr('id') === completed_title_id) {
-        product.children('div').next().text(count.length);
-      }
-    });
+      var listItems = $("#left_ul li");
+      listItems.each(function (idx, li) {
+        var product = $(li);
+        if (product.children("div").attr("id") === completed_title_id) {
+          product.children("div").next().text(count.length);
+        }
+        if (product.children("div").attr("id") === "Tasks") {
+          product.children("div").next().text(tasks_arr.length);
+        }
+      });
+    }
   });
 
   /*
@@ -282,7 +294,6 @@ $(document).ready(function () {
   /*
    * Adding sub tasks to tasks
    */
-
   step_task_input.keyup(function (e) {
     if (e.keyCode == 13) {
       let sub_task = step_task_input.val();
@@ -306,14 +317,14 @@ $(document).ready(function () {
     if (e.keyCode == 13) {
       let left_list = add_list_input.val();
       let new_ul = $("#left_ul");
-      let new_li = $('<li></li>');
-      let new_mat_icon = $('<i></i>');
+      let new_li = $("<li></li>");
+      let new_mat_icon = $("<i></i>");
       new_mat_icon.addClass("material-icons-outlined");
       new_mat_icon.html("list");
       const new_list_class = $("<div></div>");
-      new_list_class.attr("id",left_list);
+      new_list_class.attr("id", left_list);
       new_list_class.addClass("clicking-class");
-      new_list_class.text(left_list);  
+      new_list_class.text(left_list);
       let span_elem = $("<span></span>");
       span_elem.addClass("count");
       new_li.append(new_mat_icon);
