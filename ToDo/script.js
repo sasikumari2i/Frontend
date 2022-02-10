@@ -301,9 +301,7 @@ $(document).ready(function () {
       let display_step_tasks = step_map.get(right_container.text());
       step_task_input.val("");
       let step_list_append = $("<li></li>");
-      step_list_append.html(
-        "<i class='material-icons circle'>radio_button_unchecked</i>"
-      );
+      step_list_append.addClass('step-task-content');
       step_list_append.append(sub_task);
       added_step_tasks.append(step_list_append);
       step_task_input.val("");

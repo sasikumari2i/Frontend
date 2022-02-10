@@ -11,8 +11,27 @@ body {
   padding: 10px;
 }
 
-.tasks .circle {
-  padding-left: 15px;
+
+.tasks-hover:hover {
+  border-radius: 2px;
+  background: #f4f4f4;
+}
+
+.tasks {
+  line-height: 30px;
+  width: 100%;
+  margin-left: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+.tasks .material-icons-outlined {
+  font-size: 20px;
+}
+
+.tasks .material-icons {
+  width: 2%;
+  font-size: 22px;
 }
 
 .head-container {
@@ -102,8 +121,6 @@ body {
   background-color: #005A95;
 }
 
-
-
 .center-container {
   margin-top: 25px;
 }
@@ -146,11 +163,18 @@ body {
 .left-menu #left_ul li .material-icons-outlined {
   color: #767678;
   margin: 0;
-  display: flex;
   height: 25px;
-  width: 25px;
+  width: 10%;
   font-size: 18px;
   opacity: 0.9;
+}
+
+.left-menu #left_ul li div {
+  width: 80%;
+}
+
+.left-menu #left_ul li span {
+  width: 10%;
 }
 
 #new_list {
@@ -190,10 +214,6 @@ body {
 
 .sidenav hr {
   width: 100%;
-}
-
-#left_ul .count {
-  padding-left: 80px;
 }
 
 .sidenav {
@@ -265,14 +285,8 @@ body {
 }
 
 .task-contents {
-  overflow-x: auto;
+  margin-left: 10px;
 }
-
-/*#left_ul li:hover {
-    background: chocolate;
-}*/
-
-
 
 .sidenav .closebtn {
   position: absolute;
@@ -404,17 +418,12 @@ body {
 
 #add_step {
   display: flex;
-  /*justify-content: space-between;*/
   background: white;
   margin-right: 6px;
 }
 
 #step_task_input::placeholder {
    color: #465efc;
-}
-
-#step_task_input {
-  
 }
 
 #right_fourth {
@@ -436,10 +445,6 @@ body {
   appearance: none;
   outline-style: none;
   height: 40px;
-}
-
-#right_head {
-  
 }
 
 .right-second {
@@ -520,7 +525,6 @@ body {
 
 /*right container ends */
 
-
 .center-important-content {
   display: none;
 }
@@ -529,11 +533,6 @@ body {
   padding: 0;
   margin: 0;
 }
-
-/*.option {
-    display: flex;
-    color: #595d61b6;
-}*/
 
 .material-icons {
   width: 5px;
@@ -618,14 +617,6 @@ ul {
   background: #f4f4f4;
 }
 
-.tasks-hover:hover {
-  background: #f4f4f4;
-}
-
-.tasks {
-  align-content: center;
-}
-
 .center-add-myday input {
   border: none;
   appearance: none;
@@ -645,22 +636,12 @@ ul {
   display: block;
 }
 
-/*#completed_tasks {
-    display: none;
-}*/
-
 #new-task-submit {
   background: none;
   border: none;
   font-weight: 550;
   float: right;
   padding: 10px;
-}
-
-.tasks {
-  margin: 0;
-  padding: 10px;
-  font-size: 14px;
 }
 
 .hr-lines {
@@ -673,11 +654,6 @@ hr {
   color: #f4f4f4;
 }
 
-.tasks .material-icons-outlined {
-  margin: 0 ;
-  padding: 0;
-  font-size: 18px;
-}
 
 .add-myday-tasks {
   overflow: visible;
@@ -724,18 +700,6 @@ hr {
   border: none;
 }
 
-/*Lines from here*/
-
-.myday-hr {
-  margin: 0 8px;
-  height: 100%;
-}
-
-.completed {
-  margin: 0 8px;
-  height: 100%;
-}
-
 .important-hr {
   margin: 0 10px;
   padding: 0;
@@ -745,12 +709,6 @@ hr {
 hr {
   padding: 0.1px;
   margin: 0 10px;
-}
-
-.myday-hr div {
-  height: 40px;
-  margin: 0;
-  padding: 0;
 }
 
 .important-hr div {
