@@ -8,9 +8,9 @@ $(document).ready(function () {
   const tasklists = $("#myday_tasks");
   const show_completed_task = $("#completed_tasks");
   const show_submit_btn = document.querySelector("#new-task-input");
-  const add_list_input = document.querySelector("#new_list");
+  const add_list_input = $("#new_list");
   const right_container = $("#right_task_name");
-  const step_task_input = document.querySelector("#step_task_input");
+  const step_task_input = $("#step_task_input");
   const task_details = $("#rightnav");
   let added_step_tasks = $("#step_task");
   const step_map = new Map();
@@ -101,15 +101,24 @@ $(document).ready(function () {
       if (completed_title_id === completed_task.id) {
         if (completed_arr.length === 1) {
           display_completed_tasks.html(
-            "<h2 id='completed_heading'>Completed</h2>"
+              "<h2 id='completed_heading'>Completed</h2>"
           );
         }
         display_completed_tasks.append(completed_task_name);
       }
     }
-    /*var result = tasks_arr.filter((obj) => {
-      return obj.id === e.target.id;
-    });*/
+    let completed_title_id = $("#title").text();
+    let count = tasks_arr.filter((obj) => {
+      return ((obj.id === completed_title_id) && !(obj.taskname.hasClass('completed')));
+    });
+
+    var listItems = $("#left_ul li");
+    listItems.each(function(idx, li) {
+      var product = $(li);
+      if(product.children('div').attr('id') === completed_title_id) {
+        product.children('div').next().text(count.length);
+      }
+    });
   });
 
   /*
@@ -168,8 +177,8 @@ $(document).ready(function () {
       if (completed_arr.length <= 0) {
         show_completed_task.html("");
         reinsert_title_id = "";
-    }
       }
+    }
   });
 
   document.addEventListener("click", (e) => {
@@ -193,13 +202,17 @@ $(document).ready(function () {
     let todo_task = input.value;
     if (input.value) {
       let task_elem = $("<div></div>");
-      task_elem.html("<i class='material-icons circle'>radio_button_unchecked</i>");
+      task_elem.html(
+        "<i class='material-icons circle'>radio_button_unchecked</i>"
+      );
       task_elem.append(todo_task);
-      task_elem.append("<i class='material-icons-outlined important-icon'>star_outlined</i>");
+      task_elem.append(
+        "<i class='material-icons-outlined important-icon'>star_outlined</i>"
+      );
       task_elem.append("<hr>");
       task_elem.addClass("tasks");
       task_elem.addClass("tasks-hover");
-      task_elem.attr('id',todo_task);
+      task_elem.attr("id", todo_task);
       step_map.set(todo_task, []);
       const task = {
         id: title_id,
@@ -214,6 +227,18 @@ $(document).ready(function () {
         }
       }
     }
+    let completed_title_id = $("#title").text();
+    let count = tasks_arr.filter((obj) => {
+      return ((obj.id === completed_title_id) && !(obj.taskname.hasClass('completed')));
+    });
+
+    var listItems = $("#left_ul li");
+    listItems.each(function(idx, li) {
+      var product = $(li);
+      if(product.children('div').attr('id') === completed_title_id) {
+        product.children('div').next().text(count.length);
+      }
+    });
   });
 
   /*
@@ -237,63 +262,65 @@ $(document).ready(function () {
   /*
    * Adding Title to Right Side details bar
    */
-    tasklists.click(function (e) {
-      let task_id = $(e.target);
-      if (task_id.hasClass("tasks")) {
-        task_details.addClass("submit-task-display");
-        task_details.show();
-        right_container.text(task_id.attr('id'));
-        added_step_tasks.html("");
-        var st = step_map.get(right_container.text());
-        for (let i = 0; i < st.length; i++) {
-          let step_list = $("<li></li>");
-          step_list.text(st[i]);
-          added_step_tasks.append(step_list);
-          step_task_input.value = "";
-        }
+  tasklists.click(function (e) {
+    let task_id = $(e.target);
+    if (task_id.hasClass("tasks")) {
+      task_details.addClass("submit-task-display");
+      task_details.show();
+      right_container.text(task_id.attr("id"));
+      added_step_tasks.html("");
+      var st = step_map.get(right_container.text());
+      for (let i = 0; i < st.length; i++) {
+        let step_list = $("<li></li>");
+        step_list.text(st[i]);
+        added_step_tasks.append(step_list);
+        step_task_input.value = "";
       }
-    });
+    }
+  });
 
   /*
    * Adding sub tasks to tasks
    */
 
-  step_task_input.addEventListener("keyup", (e) => {
-    if (e.keyCode == 13 && step_task_input.value) {
-      const sub_task = step_task_input.value;
-      step_map.get(right_container.innerText).push(sub_task);
-      let display_step_tasks = step_map.get(right_container.innerText);
-      step_task_input.value = "";
-      var step_list_append = document.createElement("li");
-      step_list_append.innerText = sub_task;
-      added_step_tasks.appendChild(step_list_append);
-      step_task_input.value = "";
+  step_task_input.keyup(function (e) {
+    if (e.keyCode == 13) {
+      let sub_task = step_task_input.val();
+      step_map.get(right_container.text()).push(sub_task);
+      let display_step_tasks = step_map.get(right_container.text());
+      step_task_input.val("");
+      let step_list_append = $("<li></li>");
+      step_list_append.html(
+        "<i class='material-icons circle'>radio_button_unchecked</i>"
+      );
+      step_list_append.append(sub_task);
+      added_step_tasks.append(step_list_append);
+      step_task_input.val("");
     }
   });
 
   /*
    * Adding new Lists to left side panel
    */
-
-  add_list_input.addEventListener("change", () => {
-    const left_list = add_list_input.value;
-    const new_ul = document.querySelector("#left_ul");
-    const new_li = document.createElement("li");
-    const new_mat_icon = document.createElement("i");
-    new_mat_icon.classList.add("material-icons-outlined");
-    new_mat_icon.innerHTML = "list";
-    const new_list_class = document.createElement("div");
-    new_list_class.id = left_list;
-    //new_li.id = left_list;
-    new_list_class.classList.add("clicking-class");
-    new_list_class.innerText = left_list;
-    span_elem = document.createElement("span");
-    span_elem.classList.add("count");
-    new_li.appendChild(new_mat_icon);
-    //new_li.innerHTML += left_list;
-    new_li.appendChild(new_list_class);
-    new_li.appendChild(span_elem);
-    new_ul.appendChild(new_li);
-    add_list_input.value = "";
+  add_list_input.keyup(function (e) {
+    if (e.keyCode == 13) {
+      let left_list = add_list_input.val();
+      let new_ul = $("#left_ul");
+      let new_li = $('<li></li>');
+      let new_mat_icon = $('<i></i>');
+      new_mat_icon.addClass("material-icons-outlined");
+      new_mat_icon.html("list");
+      const new_list_class = $("<div></div>");
+      new_list_class.attr("id",left_list);
+      new_list_class.addClass("clicking-class");
+      new_list_class.text(left_list);  
+      let span_elem = $("<span></span>");
+      span_elem.addClass("count");
+      new_li.append(new_mat_icon);
+      new_li.append(new_list_class);
+      new_li.append(span_elem);
+      new_ul.append(new_li);
+      add_list_input.val("");
+    }
   });
 });
