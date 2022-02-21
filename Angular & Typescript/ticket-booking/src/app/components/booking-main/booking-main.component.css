@@ -1,0 +1,52 @@
+.movie-banner {
+    vertical-align: bottom;
+    height: 70px;
+    margin: 0;
+    background: #333545;
+    color: white;
+}
+
+.title {
+    font-size: 18px;
+    font-weight:800
+}
+
+.genres {
+    font-size: 12px;
+}
+
+.theatre-contents {
+    padding: 0;
+    display: flex;
+    border-bottom: 0.5px solid black;
+    width: 100%;
+}
+
+.theatre-contents .theatre-name {
+    width: 20%;
+    padding: 20px;
+}
+
+.theatre-contents .theatre-name span{
+    display: flex;
+}
+
+.theatre-contents .theatre-name span p{
+    margin: 3px;
+    font-size: 12px;
+}
+
+.theatre-contents .show-timings {
+    flex-direction: row;
+    padding: 10px;
+}
+
+.theatre-contents .show-timings button {
+    background-color: white;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 12px;
+    border: 0.1px solid #4abd5d;
+    color: #4abd5d;
+    margin: 15px;
+}

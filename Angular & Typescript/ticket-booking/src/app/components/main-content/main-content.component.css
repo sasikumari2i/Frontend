@@ -1,0 +1,31 @@
+.main-content-container {
+    width: 100%;
+    margin: 0;
+    padding: 8px;
+}
+
+.heading {
+    font-weight:800;
+}
+
+.see-all {
+    font-size:14px;
+    color: #4abd5d;
+    cursor: pointer;
+}
+
+.movies-heading {
+    display: flex;
+    justify-content: space-between;
+}
+
+.movies {
+    margin: 30px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    background-color: none;
+  }

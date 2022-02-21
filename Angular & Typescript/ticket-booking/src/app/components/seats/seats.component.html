@@ -1,0 +1,22 @@
+<app-seats-header></app-seats-header>
+<div class="seats-card">
+  <h6>Choose your seats</h6>
+  <div class="seats">
+    <table>
+      <div class="seating-details">
+        <tr *ngFor="let outerIndex of ['AL','BL','CL','DL','EL','FL','GL','HL']">
+          <td *ngFor="let innerIndex of [1,2,3,4,5]">
+            <button>{{ outerIndex + innerIndex }}</button>
+          </td>
+        </tr>
+      </div>
+      <div class="seating-details">
+        <tr *ngFor="let outerIndex of ['AR','BR','CR','DR','ER','FR','GR','HR']">
+          <td *ngFor="let innerIndex of [1,2,3,4,]">
+            <button>{{ outerIndex + innerIndex }}</button>
+          </td>
+        </tr>
+      </div>
+    </table>
+  </div>
+</div>
