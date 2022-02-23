@@ -1,26 +1,161 @@
 <!DOCTYPE html>
 
+<html>
+
 <head>
     <script src="script.js" defer></script>
+    <script type="text/javascript" src="jquery.js"></script>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/7ededfaa71.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-    <div class="root">
-        <div class="navbar">
-            <span class="text">To Do</span>
-            <div class="header-menu">
-                <button class="settings">SE</button>
-                <button class="settings">HE</button>
-                <button class="settings">WN</button>
-                <button class="settings">UP</button>
+    <div class="head-container">
+       <div class="header-title"><span class="material-icons-outlined">apps</span>
+        <span class="title">To Do</span></div>
+        <!--<div class="search-box"><span class="material-icons-outlined search">search</span>
+        <input class="search-text"><i class="material-icons-outlined search">search</i>-->
+        <div class="search-box"><button><img src = "search.svg" alt="search"/></button></div>
+        <div class="head-right">
+            <img class="header-icons" src = "icons8-settings(1).svg" alt="settings"/>
+            <img class="header-icons" src = "qmark1.png" alt="questionmark"/>
+            <img class="header-icons" src = "megaphone.png" alt="what's new"/>
+            <!--<i id="settings-cta" class="material-icons-outlined">settings</i>-->
+            <!--<i class="material-icons-outlined">question_mark</i>-->
+            <!--<i class="material-icons-outlined">new</i>-->
+            <span class="header-icons">SK</span>
+        </div>
+    </div>
+
+    <div class="center-container">
+        <div id="mySidenav" class="sidenav">
+            <img id="close_left" class="close-menu" src = "icons8-menu(1).svg" alt="menu"/>
+            <div class="left-menu">
+                <ul id="left_ul">
+                    <li><i class="material-icons-outlined">
+                        light_mode</i>
+                        <div id="My Day" class="clicking-class">My Day</div><span class="count"></span></li>
+                    <li><i class="material-icons-outlined">star_border</i>
+                        <div id="Important" class="clicking-class">Important</div><span class="count"></span>
+                    </li>
+                    <li><i class="material-icons-outlined">calendar_month</i>
+                        <div id="Planned" class="clicking-class">Planned</div><span class="count"></span>
+                    </li>
+                    <li><i class="material-icons-outlined">list</i>
+                        <div id="Assigned" class="clicking-class">Assigned</div><span class="count"></span>
+                    </li>
+                    <li><i class="material-icons-outlined">home</i>
+                        <div id="Tasks" class="clicking-class">Tasks</div><span class="task_count count"></span>
+                    </li>
+                </ul>
+                <ul id="left-list-input">
+                    <li class="left-new-list"><span class="material-icons-outlined">add<input id="new_list" type="text"></span><span class="material-icons-outlined">group</span>
+                    </li>
+                </ul>
             </div>
-            <div class="search-box">
-                <button class="fas fa-search search-btn"></button>
+            <div class="left-bottom-icons">
+                <i class="material-icons-outlined">mail</i>
+                <i class="material-icons-outlined">calendar_month</i>
+                <i class="material-icons-outlined">people_outline</i>
+                <i class="material-icons-outlined">attach_file</i>
+                <i class="material-icons-outlined tick">done</i>
+            </div>
+        </div>
+
+        <div id="main" class="center-content">
+            <div id="myday-content" class="center-myday-content">
+                <div class="center-myday-head">
+                    <!--<i id="nav-btn" class="material-icons menu">menu</i>-->
+                    <img id="nav-btn" class="close-menu" src = "icons8-menu(1).svg" alt="menu"/>
+                    <div id="main" class="my-day my-day-initial">
+                        <!--<p class="my-day">My Day</p>-->
+                        <p id="title" class="my-day">My Day</p>
+                    </div>
+                    <div id="myday_right_menu" class="center-head-right">
+                        <button id="head_button" class="button"><span class="material-icons-outlined">import_export</span class="button-text">Sort</button>
+                        <button id="head_button" class="button"><span class="material-icons-outlined">lightbulb</span class="button-text">Suggestions</button>
+                    </div>
+                </div>
+
+                <div class="add-myday-tasks">
+                    <div id="myday-add-btn" class="center-add-myday">
+                        <form id="new-myday-task" autocomplete="off">
+                            <div id="task-input">
+                                <i class="material-icons-outlined">add</i>
+                                <input type="text" id="new-task-input" class="add-myday-text" placeholder="Add a task" />
+                            </div>
+                            <div id="submit_task_show" class="task-input-submit">
+                                <i class="material-icons-outlined">calendar_month</i>
+                                <i class="material-icons-outlined">notifications</i>
+                                <i class="material-icons-outlined">event_repeat</i>
+                                <input type="submit" id="new-task-submit" value="Add">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="task-contents">
+                        <div id="myday_tasks" class="myday-hr">
+                        </div>
+                        <div id="completed_tasks" class="completed">            
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+    <div id="rightnav" class="right-container">
+        <div id="right-menus">
+        <div id="right_head" class="right-heading">
+            <i class="material-icons-outlined">circle</i>
+            <span id="right_task_name"></span>
+            <i class="material-icons-outlined subtask-title">star_outline</i>
+        </div>
+        <div class="step-task">
+            <ul id="step_task">
+
+            </ul>
+        </div>
+        <div id="add_step">
+            <i class="material-icons-outlined">add</i>
+            <input type="text" id="step_task_input" placeholder="Add step">
+        </div>
+        <div id="right_second" class="right-second">
+            <i class="material-icons-outlined">light_mode</i>
+            <span>Added to My Day</span>
+        </div>
+        <div id="right_third">
+            <ul>
+                <li><i class="material-icons-outlined">notifications</i>
+                    <span>Remind me</span></li>
+                <li><i class="material-icons-outlined">calendar_month</i>
+                    <span>Add due date</span></li>
+                <li><i class="material-icons-outlined">event_repeat</i>
+                    <span>Repeat</span></li>
+            </ul>
+        </div>
+
+        <div id="right_fourth" class="right-second">
+            <i class="material-icons-outlined">local_offer</i>
+            <span>Pick a Category</span>
+        </div>
+
+        <div id="right_fifth" class="right-second">
+            <i class="material-icons-outlined">attach_file</i>
+            <span>Add File</span>
+        </div>
+
+        <div id="right_sixth" class="right-second">
+            <textarea class="text-area" placeholder="Add note"></textarea>
+        </div>
+        </div>
+        <div class="left-bottom-icons">
+            <i id="right_close" class="material-icons-outlined">drive_file_move</i>
+            <span><p>Created Today</p></span>
+            <i class="material-icons-outlined">delete</i>
+        </div>
+    </div>
+
 </body>
 
 </html>
