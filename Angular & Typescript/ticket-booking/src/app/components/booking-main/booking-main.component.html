@@ -1,0 +1,24 @@
+<div class="booking-main-container">
+  <div class="movie-banner">
+    <div class="title-card">
+      <span>
+        <span class="title">{{ movie.movieTitle }}</span>
+        <span class="genres">
+          <p>{{ movie.genre }}</p></span>
+      </span>
+    </div>
+  </div>
+  <div *ngFor="let theatre of movie.theatre" class="theatre-contents">
+    <div class="theatre-name">
+      <span class="title">{{ theatre.name }}</span>
+      <span class="genres">
+        <p>M-Ticket</p>
+        <p>Food & Beverage</p>
+      </span>
+    </div>
+    <a *ngFor="let timing of theatre.timings" routerLink="/seats/{{movie.movieTitle}}/{{theatre.name}}/{{timing}}">
+    <div  class="show-timings">
+      <button>{{ timing }}</button>
+    </div></a>
+  </div>
+</div>

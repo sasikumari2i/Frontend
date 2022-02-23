@@ -1,0 +1,39 @@
+.seats-card {
+  max-width: 50%;
+  margin: 5% auto;
+  overflow: auto;
+  /*min-height: 300px;*/
+  border: 1px solid steelblue;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.seats button {
+  font-size: 12px;
+  padding: 2px 8px;
+  background: none;
+  outline-style: none;
+  appearance: none;
+  border-radius: 2px;
+}
+
+.seats tr button {
+    margin: 5px;
+}
+
+.seats {
+    margin: 5% 1%;
+}
+
+.seats table {
+    display: flex;
+    justify-content: space-between;
+}
+
+.seating-details button {
+    background: none;
+    border: 0.1px solid #F84464;
+    color: #F84464;
+    padding: 10px;
+    font-size: 10px;
+}

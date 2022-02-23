@@ -1,0 +1,17 @@
+img {
+    padding: 0 10px;
+    width: 100%;
+    border-radius: 18px;
+}
+
+.movie-card:hover {
+    cursor: pointer;
+}
+
+.card-title {
+    font-weight: 800;
+}
+
+.card-text {
+    font-size: 12px;
+}
