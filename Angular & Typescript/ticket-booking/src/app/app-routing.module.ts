@@ -9,13 +9,24 @@ const appRoutes: Routes = [
     path: '', 
     component : MiddleContainerComponent
   },
-  {
+  /*{
     path: 'booking/:movieTitle', 
-    component : BookingMainComponent
-  },
-  {
+    component: BookingMainComponent
+    },*/ 
+  /*{
     path: 'selectSeats/:movieTitle/:name/:timing', 
     component : SeatsComponent
+  }*/
+  /*{
+    path: 'main', loadChildren: () => import('./components/main-content/main-content.module').then(m => m.MainContentModule)
+  }*/
+  {
+    path: 'seats', 
+    loadChildren: () => import('./components/seats/seats.module').then(m => m.SeatsModule)
+  },
+  {
+    path: 'booking', 
+    loadChildren: () => import('./components/booking-main/booking-main.module').then(m => m.BookingMainModule)
   }
 ]
 
@@ -24,3 +35,4 @@ const appRoutes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+

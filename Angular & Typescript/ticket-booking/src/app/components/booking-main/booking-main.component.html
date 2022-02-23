@@ -16,8 +16,9 @@
         <p>Food & Beverage</p>
       </span>
     </div>
-    <div *ngFor="let timing of theatre.timings" class="show-timings">
-      <button (click)="getAvailableSeats(movie,theatre.name,timing)">{{ timing }}</button>
-    </div>
+    <a *ngFor="let timing of theatre.timings" routerLink="/seats/{{movie.movieTitle}}/{{theatre.name}}/{{timing}}">
+    <div  class="show-timings">
+      <button>{{ timing }}</button>
+    </div></a>
   </div>
 </div>

@@ -5,9 +5,8 @@
       <span class="see-all">See All ></span>
     </div>
     <div class="card-container">
-      <app-movie-list
-           *ngFor="let movie of movies"
-        [movie]="movie" (onItemClick)="itemClick(movie)"></app-movie-list>
+      <a *ngFor="let movie of movies" [routerLink]="['./booking',movie.movieTitle]"><app-movie-list
+       [movie]="movie"></app-movie-list></a>
     </div>
   </div>
 </div>

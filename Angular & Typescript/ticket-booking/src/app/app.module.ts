@@ -8,15 +8,15 @@ import { HeaderTopComponent } from './components/header-top/header-top.component
 import { HeaderBottomComponent } from './components/header-bottom/header-bottom.component';
 import { MiddleContainerComponent } from './components/middle-container/middle-container.component';
 import { MainBannerComponent } from './components/main-banner/main-banner.component';
-import { MainContentComponent } from './components/main-content/main-content.component';
-import { MovieListComponent } from './components/movie-list/movie-list.component';
-import { PremierListComponent } from './components/premier-list/premier-list.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BookingMainComponent } from './components/booking-main/booking-main.component';
 import { SeatsComponent } from './components/seats/seats.component';
 import { SeatsHeaderComponent } from './components/seats-header/seats-header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
+import { MainContentComponent } from './components/main-content/main-content.component';
+import { MovieListComponent } from './components/movie-list/movie-list.component';
+import { PremierListComponent } from './components/premier-list/premier-list.component';
 
 @NgModule({
   declarations: [
@@ -26,20 +26,20 @@ import { FormsModule } from '@angular/forms';
     HeaderBottomComponent,
     MiddleContainerComponent,
     MainBannerComponent,
+    FooterComponent,
+    //BookingMainComponent,
+    //SeatsComponent,
+    //SeatsHeaderComponent,
     MainContentComponent,
     MovieListComponent,
-    PremierListComponent,
-    FooterComponent,
-    BookingMainComponent,
-    SeatsComponent,
-    SeatsHeaderComponent,
+    PremierListComponent
   ],
   imports: [
     FontAwesomeModule,
     BrowserModule,
     NgbModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

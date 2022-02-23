@@ -27,7 +27,7 @@ export class MainContentComponent implements OnInit {
   }
 
   itemClick(movie:Movie) {
-    this.router.navigate(['/booking',movie.movieTitle]);
+    this.router.navigate(['./booking',movie.movieTitle]);
   }
 
   getCategory(category: string) {
