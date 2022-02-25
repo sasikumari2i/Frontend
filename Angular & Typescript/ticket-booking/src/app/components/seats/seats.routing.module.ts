@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BookingMainComponent } from '../booking-main/booking-main.component';
 import { SeatsComponent } from './seats.component';
 import { SeatsHeaderComponent } from '../seats-header/seats-header.component';
 
@@ -25,9 +24,4 @@ const routes: Routes = [
     exports: [RouterModule]
   })
 
-  export class SeatsRoutingModule { 
-      constructor() {
-          console.log("Success");
-      }
-
-  }
+  export class SeatsRoutingModule { }

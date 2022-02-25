@@ -20,15 +20,18 @@
 
 .footer-container .footer-aboutus {
     padding: 25px;
+    color: rgb(204, 204, 204);
     background: #404043;
     display: flex;
     justify-content: space-around;
     font-size: 12px;
-    opacity: 0.3;
+    opacity: 0.5;
 }
 
 .footer-container .footer-aboutus span:hover {
-    color: blue;
+    color: white;
     cursor: pointer;
+    transform: scale(1.2);
+    opacity: 2;
     transition: 0.3s;
 }

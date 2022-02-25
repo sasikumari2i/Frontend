@@ -1,11 +1,16 @@
-import { Movie } from "./Movie"
-
+import { Movie } from "./MockInterface"
+import { Premier } from "./MockInterface"
 
 export const MOVIES: Movie[] = [
     {
-        img : '../../assets/movie1.avif',
+        img : '../../assets/movie1.jpg',
         movieTitle : 'FIR',
         genre : 'Thriller',
+        banner : '../../assets/FIR-banner.jpg',
+        votes: '84%',
+        time: '2h 58m',
+        cert: 'UA',
+        date: '24,Feb,2022',
         theatre : [
             {
                name : 'AGS Cinemas',
@@ -30,9 +35,14 @@ export const MOVIES: Movie[] = [
         ]
     },
     {
-        img : '../../assets/movie2.avif',
+        img : '../../assets/movie2.jpg',
         movieTitle : 'UNCHARTED',
         genre : 'Action',
+        banner : '../../assets/movie2-banner.jpg',
+        votes: '84%',
+        time: '2h 20m',
+        cert: 'UA',
+        date: '21,Feb,2022',
         theatre : [
             {
                name : 'GK Cinemas',
@@ -57,9 +67,14 @@ export const MOVIES: Movie[] = [
         ]
     },
     {
-        img : '../../assets/movie3.avif',
+        img : '../../assets/movie3.jpg',
         movieTitle : 'Veerapandiyapuram',
         genre : 'Action',
+        banner : '../../assets/movie3-banner.jpg',
+        votes: '84%',
+        time: '2h 34m',
+        cert: 'UA',
+        date: '17,Feb,2022',
         theatre : [
             {
                name : 'Jothi Theatre',
@@ -84,9 +99,14 @@ export const MOVIES: Movie[] = [
         ]
     },
     {
-        img : '../../assets/movie4.avif',
+        img : '../../assets/movie4.jpg',
         movieTitle : 'Neyyattinkara Gopante Aaraattu',
         genre : 'Comedy',
+        banner : '../../assets/movie4-banner.jpg',
+        votes: '84%',
+        time: '2h 43m',
+        cert: 'UA',
+        date: '10,Feb,2022',
         theatre : [
             {
                 name : 'Kumaran Theatres',
@@ -111,9 +131,14 @@ export const MOVIES: Movie[] = [
         ]
     },
     {
-        img : '../../assets/movie5.avif',
+        img : '../../assets/movie5.jpg',
         movieTitle : 'Kadaisi Vivasayi',
         genre : 'Comedy',
+        banner : '../../assets/movie5-banner.jpg',
+        votes: '84%',
+        time: '2h 50m',
+        cert: 'UA',
+        date: '1,Feb,2022',
         theatre : [
             {
                name : 'EVP Cinemas',
@@ -136,5 +161,33 @@ export const MOVIES: Movie[] = [
                 timings : ['10:30AM','06:30PM','05:30PM'] 
             }
         ]
+    },
+]
+
+export const PREMIERES: Premier[] = [
+    {
+        img : '../../assets/premier1.avif',
+        title : 'Resident Evil: Welcome To Raccoon City',
+        language : 'English',
+    },
+    {
+        img : '../../assets/premier2.avif',
+        title : 'Die In A Gunfight',
+        language : 'English',
+    },
+    {
+        img : '../../assets/premier3.avif',
+        title : 'The Hating Game',
+        language : 'English',
+    },
+    {
+        img : '../../assets/premier4.avif',
+        title : 'Fatale',
+        language : 'English',
+    },
+    {
+        img : '../../assets/premier5.avif',
+        title : 'Half Brothers',
+        language : 'English',
     },
 ]

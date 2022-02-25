@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Movie } from 'src/app/Movie';
-import { Premier } from 'src/app/Premier';
-import { PREMIERES } from 'src/app/premieresdb';
-import { MOVIES } from 'src/app/sampledb';
+import { Movie } from 'src/app/MockInterface';
+import { Premier } from 'src/app/MockInterface';
+import { PREMIERES } from 'src/app/Mockdb';
+import { MOVIES } from 'src/app/Mockdb';
 import { Router } from '@angular/router';
 
 @Component({

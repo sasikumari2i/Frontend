@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,11 +9,20 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
 
   color:string = "blue";
+  @Input() text: string;
+  headerLeftNavList = ["Movies","Stream","Events","Plays","Sports","Activities","Buzz"];
+  headerRightNavList = ["ListYourShow","Corporates","Offers","Gift Cards"]
+
 
   constructor(private router: Router) { 
+    console.log(this.text);
   }
 
   ngOnInit(): void {
+  }
+
+  gotoHome() {
+    this.router.navigateByUrl('/');
   }
 
   //getRequiredList() {
