@@ -16,6 +16,6 @@ const routes: Routes = [
     exports: [RouterModule]
   })
 
-  export class MainContentRoutingModule { 
+  export class BookingMainRoutingModule { 
 
   }

@@ -1,9 +1,9 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { MOVIES } from 'src/app/sampledb';
-import { Movie } from 'src/app/Movie';
-import { Theatre } from 'src/app/Theatre';
+import { MOVIES } from 'src/app/Mockdb';
+import { Movie } from 'src/app/MockInterface';
 import { Router } from '@angular/router';
+import { MovieListComponent } from '../movie-list/movie-list.component';
 
 @Component({
   selector: 'app-booking-main',
@@ -15,7 +15,8 @@ export class BookingMainComponent implements OnInit {
 movie:Movie;
 counter:number = 0;
 
-  constructor(private route: Router,private router: ActivatedRoute) { 
+  constructor(private route: Router,private router: ActivatedRoute) {
+    
   }
 
   ngOnInit(): void {
@@ -30,5 +31,4 @@ counter:number = 0;
   getAvailableSeats(movie:Movie,name:string,timing:string) {
     this.route.navigate(['/selectSeats',movie.movieTitle,name,timing]);
   }
-
 }

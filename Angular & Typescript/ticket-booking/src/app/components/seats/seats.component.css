@@ -1,11 +1,33 @@
+.movie-details {
+  background-color:#222539;
+  color: white;
+  padding: 5px 15px 5px 15px;
+}
+
+.movie-details .theatre span {
+  padding-right: 25px;
+  font-weight: 600;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.movie-details .title h4 {
+   font-weight: 600;
+   opacity: 0.9;
+}
+
 .seats-card {
   max-width: 50%;
-  margin: 5% auto;
+  margin: 1% auto;
   overflow: auto;
   /*min-height: 300px;*/
-  border: 1px solid steelblue;
+  border: 0.1px solid #eff1f3;
   padding: 30px;
   border-radius: 5px;
+}
+
+.seats-card h6 {
+  font-weight: 800;
 }
 
 .seats button {

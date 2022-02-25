@@ -1,17 +1,25 @@
 img {
     padding: 0 10px;
     width: 100%;
-    border-radius: 18px;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.movie-card {
+    transition: 0.5s;
 }
 
 .movie-card:hover {
     cursor: pointer;
+    transform: scale(1.05);
 }
 
 .card-title {
     font-weight: 800;
+    font-size: 17px;
 }
 
 .card-text {
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: 500;
 }

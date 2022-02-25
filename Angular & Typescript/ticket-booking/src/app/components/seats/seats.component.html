@@ -1,12 +1,16 @@
 <app-seats-header></app-seats-header>
+<div class="movie-details"><span class="title"><h4>{{ movie.movieTitle }}</h4></span>
+  <div class="theatre"><span>{{ theatre }}</span>
+   <span>{{ showTime }}</span></div>
+</div>
 <div class="seats-card">
   <h6>Choose your seats</h6>
   <div class="seats">
     <table>
       <div class="seating-details">
         <tr *ngFor="let outerIndex of ['AL','BL','CL','DL','EL','FL','GL','HL']">
-          <td *ngFor="let innerIndex of [1,2,3,4,5]">
-            <button>{{ outerIndex + innerIndex }}</button>
+          <td *ngFor="let innerIndex of [1,2,3,4,5]" (click)="getSeat()" [style.color]="seat?'blue' : 'black'">
+            <button >{{ outerIndex + innerIndex }}</button>
           </td>
         </tr>
       </div>

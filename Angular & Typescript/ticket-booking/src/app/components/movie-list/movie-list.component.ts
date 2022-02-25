@@ -1,5 +1,5 @@
 import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
-import { Movie } from 'src/app/Movie';
+import { Movie } from 'src/app/MockInterface';
 import { Router } from '@angular/router';
 //import { EventEmitter } from 'stream';
 
@@ -12,7 +12,8 @@ export class MovieListComponent implements OnInit {
 
   @Input() movie: Movie;
   @Output() onItemClick: EventEmitter<Movie> = new EventEmitter();
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+   }
 
   ngOnInit(): void {
   }

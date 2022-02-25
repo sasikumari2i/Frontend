@@ -1,0 +1,99 @@
+.header-container {
+    padding: 0;
+    position: sticky;
+    top:0;
+    z-index: 1;
+}
+
+.header-top-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333545;
+    color: white;
+    padding: 15px 25px 10px 20px;
+}
+
+.sign-in {
+    color: rgb(204, 204, 204);
+    display: flex;
+    line-height: normal;
+    vertical-align: middle;
+    padding: 5px;
+}
+
+.logo {
+    display: flex;
+    padding: 3px;
+}
+
+.logo span img {
+    
+    vertical-align: top;
+    width: 150px;
+    padding: 0px 10px;
+    display: flex;
+    cursor: pointer;
+}
+
+
+.header-top-container input {
+    border-radius: 6px;
+    width: 500px;
+    height: 35px;
+    padding: 5px;
+    line-height: 35px;
+    font-size: 13px;
+}
+
+.sign-in span {
+    padding: 3px;
+    line-height: normal;
+    vertical-align: middle;
+}
+
+.nav-btn {
+    background-color:none;
+}
+
+.btn-outline-primary:hover {
+    background-color: #333545;
+
+}
+.signin-button {
+    background-color: #F84464;
+}
+
+.sign-in button {
+    font-size: 14px;
+    border-radius: 4px;
+    outline-style: none;
+    border: none;
+    appearance: none;
+    padding: 5px 10px 5px 10px;
+    color: white;
+}
+
+.header-bottom-container {
+    background-color:#222539;
+    color : rgb(204, 204, 204);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px 10px 0px;
+    font-size: 14px;
+}
+
+.header-bottom-container ul {
+    display: inline;
+    outline-style: none;
+}
+
+.header-bottom-container ul li {
+    padding: 5px;
+    display: inline;
+}
+
+.header-bottom-container ul li:hover {
+    color: #F4F4F4;
+    cursor: pointer;
+    transition: 0.5s;
+}

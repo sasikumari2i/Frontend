@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Premier } from 'src/app/Premier';
+import { Premier } from 'src/app/MockInterface';
 
 @Component({
   selector: 'app-premier-list',
