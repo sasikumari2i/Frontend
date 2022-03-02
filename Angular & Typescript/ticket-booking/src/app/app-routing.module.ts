@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MiddleContainerComponent } from './components/middle-container/middle-container.component';
+import { HomeComponent } from './components/home/home.component';
 
 const appRoutes: Routes = [
   {
     path: '', 
-    component : MiddleContainerComponent
+    component : HomeComponent
   },
   {
     path: 'seats', 
@@ -13,7 +13,7 @@ const appRoutes: Routes = [
   },
   {
     path: 'booking', 
-    loadChildren: () => import('./components/booking-main/booking-main.module').then(m => m.BookingMainModule)
+    loadChildren: () => import('./components/theatres/theatres.module').then(m => m.TheatresModule)
   }
 ]
 
@@ -21,5 +21,7 @@ const appRoutes: Routes = [
   imports: [RouterModule.forRoot(appRoutes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { 
+  
+}
 

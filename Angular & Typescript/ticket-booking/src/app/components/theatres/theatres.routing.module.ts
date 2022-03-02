@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SeatsComponent } from './seats.component';
+import { TheatresComponent } from './theatres.component';
 
 
 const routes: Routes = [
 
   {
-    path: ':movieTitle/:name/:timing',
-    component: SeatsComponent,
+    path: ':movieTitle',
+    component: TheatresComponent
   }
 ];
 
@@ -16,4 +16,6 @@ const routes: Routes = [
     exports: [RouterModule]
   })
 
-  export class SeatsRoutingModule { }
+  export class TheatresRoutingModule { 
+
+  }

@@ -13,6 +13,13 @@ export interface Movie {
 export interface Theatre {
     name: string;
     timings:string[];
+    seats:Seat;
+}
+
+export interface Seat {
+    seatAreaLeft : string[];
+    seatAreaRight : string[];
+    seatNumber : number[];
 }
 
 export interface Premier {

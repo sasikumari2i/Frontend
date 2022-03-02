@@ -3,10 +3,14 @@
     <div class="header-top-container">
       <div class="logo">
         <span><img src="../../assets/bookmyshow.png" (click)='gotoHome()'></span>
-        <input
-          type="text"
-          placeholder="Search for Movies,Events,Plays,Sports and Activities"
-        />
+          <input #searchInput [(ngModel)]="name"
+          type="text" (input) ="getSearchFilter()"
+          placeholder="Search for Movies,Events,Plays,Sports and Activities" [matAutocomplete]="auto"/>
+          <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let option of movies" [value]="option.movieTitle" (click)="itemClick(option.movieTitle)">
+              {{option.movieTitle }}
+            </mat-option>
+          </mat-autocomplete>
       </div>
       <div class="sign-in">
         <span><div ngbDropdown>
@@ -18,11 +22,10 @@
         <i class="fa-solid fa-bars"></i>
       </div>
     </div>
-    <!--<app-header-top color="blue" text="Actions"></app-header-top>-->
     <div class="header-bottom-container">
       <div class="header-left-list">
           <ul>
-              <li *ngFor="let item of headerLeftNavList;">{{ item }}</li>
+              <li *ngFor="let item of headerLeftNavList">{{ item }}</li>
           </ul>
       </div>
       <div class="header-right-list">
@@ -31,8 +34,5 @@
           </ul>
       </div>
   </div>
-    <!--<app-header-bottom ></app-header-bottom>-->
   </div>
 </div>
-
-<!--(rightListClick)="getRequiredList()"-->

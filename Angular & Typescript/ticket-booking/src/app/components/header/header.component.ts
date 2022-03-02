@@ -1,5 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
+import { Movie } from 'src/app/MockInterface';
+import { MoviesService } from 'src/app/services/movies.service';
 
 @Component({
   selector: 'app-header',
@@ -8,30 +10,43 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
+  public name = '';
+
+  @ViewChild('searchInput')
+  searchInput:ElementRef;
+
   color:string = "blue";
+  movies:Movie[] = [];
   @Input() text: string;
   headerLeftNavList = ["Movies","Stream","Events","Plays","Sports","Activities","Buzz"];
   headerRightNavList = ["ListYourShow","Corporates","Offers","Gift Cards"]
 
 
-  constructor(private router: Router) { 
-    console.log(this.text);
+  constructor(private movieService: MoviesService ,private router: Router) { 
   }
 
   ngOnInit(): void {
+    this.movies = this.movieService.getMovies();
+  }
+
+  getSearchFilter() {
+    if(this.name != '') {
+      for(let movie in this.movies) {
+               
+      }
+    }
   }
 
   gotoHome() {
     this.router.navigateByUrl('/');
   }
-
-  //getRequiredList() {
-    //console.log('success');
-  //}
+ 
+  itemClick(movieTitle:string) {
+    this.searchInput.nativeElement.value = "";
+    this.router.navigate(['./booking',movieTitle]);
+  }
 
   getMainHeader(route: string) {
     return !this.router.url.includes(route);
   }
-
-
 }

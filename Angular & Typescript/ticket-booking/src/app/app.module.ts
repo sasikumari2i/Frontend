@@ -4,32 +4,39 @@ import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './components/header/header.component';
-import { MiddleContainerComponent } from './components/middle-container/middle-container.component';
-import { MainBannerComponent } from './components/middle-container/main-banner/main-banner.component';
+import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
-import { MainContentComponent } from './components/middle-container/main-content/main-content.component';
-import { MovieListComponent } from './components/movie-list/movie-list.component';
-import { PremierListComponent } from './components/premier-list/premier-list.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MoviesComponent } from './components/movies/movies.component';
+import { PremiersComponent } from './components/premiers/premiers.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    MiddleContainerComponent,
-    MainBannerComponent,
+    HomeComponent,
     FooterComponent,
-    MainContentComponent,
-    MovieListComponent,
-    PremierListComponent
+    MoviesComponent,
+    PremiersComponent
   ],
   imports: [
+    MatInputModule,
+    MatAutocompleteModule,
+    MatFormFieldModule,
     FontAwesomeModule,
     BrowserModule,
     NgbModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

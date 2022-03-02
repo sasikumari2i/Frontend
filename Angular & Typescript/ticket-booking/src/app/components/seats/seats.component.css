@@ -1,19 +1,24 @@
-.movie-details {
+.movie {
   background-color:#222539;
   color: white;
   padding: 5px 15px 5px 15px;
 }
 
-.movie-details .theatre span {
+.movie .theatre span {
   padding-right: 25px;
   font-weight: 600;
   font-size: 12px;
   opacity: 0.8;
 }
 
-.movie-details .title h4 {
-   font-weight: 600;
+.movie .title h4 {
+   font-weight: 550;
    opacity: 0.9;
+}
+
+.disable {
+  color: white;
+  background-color: #1ea83c;
 }
 
 .seats-card {
@@ -22,7 +27,7 @@
   overflow: auto;
   /*min-height: 300px;*/
   border: 0.1px solid #eff1f3;
-  padding: 30px;
+  padding: 15px;
   border-radius: 5px;
 }
 
@@ -33,10 +38,15 @@
 .seats button {
   font-size: 12px;
   padding: 2px 8px;
-  background: none;
   outline-style: none;
   appearance: none;
   border-radius: 2px;
+}
+
+.seats button:hover {
+  background-color: #1ea83c;
+  color: white;
+  transition: 0.2s;
 }
 
 .seats tr button {
@@ -44,18 +54,104 @@
 }
 
 .seats {
-    margin: 5% 1%;
+    margin: 5% 5%;
 }
 
 .seats table {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+
+.seating-details .enable {
+  color: #1ea83c;
+  background-color: white;
 }
 
 .seating-details button {
-    background: none;
-    border: 0.1px solid #F84464;
-    color: #F84464;
+    border: 0.1px solid #1ea83c;
     padding: 10px;
     font-size: 10px;
+}
+
+.header-top-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #333545;
+  color: white;
+  padding: 10px 5px 0px 5px;
+}
+
+.sign-in {
+  color: rgb(204, 204, 204);
+  display: flex;
+  line-height: normal;
+  vertical-align: middle;
+  padding: 5px;
+}
+
+.logo {
+  display: flex;
+  padding: 3px;
+}
+
+.logo span img {
+  line-height: 20px;
+  width: 150px;
+  padding: 5px 10px;
+  display: flex;
+  cursor: pointer;
+}
+
+.header-top-container input {
+  border-radius: 6px;
+  width: 500px;
+  height: 31px;
+  padding: 5px;
+  line-height: normal;
+  vertical-align: middle;
+  font-size: 13px;
+}
+
+.sign-in span {
+  padding: 3px;
+  line-height: normal;
+  vertical-align: middle;
+}
+
+.nav-btn {
+  background-color:none;
+}
+
+.btn-outline-primary:hover {
+  background-color: #333545;
+
+}
+.signin-button {
+  background-color: #F84464;
+}
+
+.movie-details {
+  padding: 0 10px;
+}
+
+.movie-details .title {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.movie-details span {
+  font-size: 14px;
+  padding: 0 10px;
+  font-weight: 600;
+}
+
+
+.sign-in button {
+  font-size: 14px;
+  border-radius: 4px;
+  outline-style: none;
+  border: none;
+  appearance: none;
+  padding: 5px 10px 5px 10px;
+  color: white;
 }

@@ -1,5 +1,12 @@
 import { Movie } from "./MockInterface"
 import { Premier } from "./MockInterface"
+import { Seat } from "./MockInterface"
+
+export const seats:Seat = {
+    seatAreaLeft : ['AL','BL','CL','DL','EL','FL','GL','HL'],
+    seatAreaRight : ['AR','BR','CR','DR','ER','FR','GR','HR'],
+    seatNumber : [1,2,3,4,]
+}
 
 export const MOVIES: Movie[] = [
     {
@@ -14,23 +21,28 @@ export const MOVIES: Movie[] = [
         theatre : [
             {
                name : 'AGS Cinemas',
-               timings : ['4:30AM','10:45AM','06:30PM'] 
+               timings : ['4:30AM','10:45AM','06:30PM'], 
+               seats : seats
             },
             {
                 name : 'EVP Cinemas',
-                timings : ['12:00PM','03:00PM','07:00PM','10:30PM'] 
+                timings : ['12:00PM','03:00PM','07:00PM','10:30PM'],
+                seats : seats
              },
              {
                 name : 'Kasi Talkies',
-                timings : ['01:00PM','04:00PM','07:30PM'] 
+                timings : ['01:00PM','04:00PM','07:30PM'],
+                seats : seats
              },
              {
                 name : 'Sathyam Cinemas',
-                timings : ['12:00PM','07:00PM','10:30PM'] 
+                timings : ['12:00PM','07:00PM','10:30PM'],
+                seats : seats
              },
              {
                 name : 'Gokul Theatres',
-                timings : ['12:00PM','03:00PM','10:30PM'] 
+                timings : ['12:00PM','03:00PM','10:30PM'],
+                seats : seats
              }
         ]
     },
@@ -46,23 +58,28 @@ export const MOVIES: Movie[] = [
         theatre : [
             {
                name : 'GK Cinemas',
-               timings : ['12:00PM','03:00PM','07:00PM','10:40PM'] 
+               timings : ['12:00PM','03:00PM','07:00PM','10:40PM'],
+               seats : seats
             },
             {
                 name : 'Sathyam Cinemas',
-                timings : ['12:00PM','03:00PM','07:00PM','10:30PM'] 
+                timings : ['12:00PM','03:00PM','07:00PM','10:30PM'],
+                seats : seats
              },
              {
                 name : 'Gokulam Cinemas',
-                timings : ['12:00PM','03:00PM','07:00PM','10:30PM'] 
+                timings : ['12:00PM','03:00PM','07:00PM','10:30PM'],
+                seats : seats
              },
             {
                 name : 'Green Cinemas',
-                timings : ['12:00PM','03:00PM','07:00PM','10:30PM'] 
+                timings : ['12:00PM','03:00PM','07:00PM','10:30PM'],
+                seats : seats
             },
             {
                 name : 'INOX National',
-                timings : ['12:00PM','03:00PM','07:00PM','10:30PM'] 
+                timings : ['12:00PM','03:00PM','07:00PM','10:30PM'],
+                seats : seats
             }
         ]
     },
@@ -78,23 +95,28 @@ export const MOVIES: Movie[] = [
         theatre : [
             {
                name : 'Jothi Theatre',
-               timings : ['09:00AM','02:00PM','05:00PM','11:30PM']  
+               timings : ['09:00AM','02:00PM','05:00PM','11:30PM'],
+               seats : seats
             },
             {
                 name : 'Kasi Talkies',
-                timings : ['11:00AM','06:30PM','07:30PM']  
+                timings : ['11:00AM','06:30PM','07:30PM'],
+                seats : seats
             },
             {
                 name : 'Luxe Cinemas',
-                timings : ['12:00PM','03:00PM','07:00PM','10:30PM']  
+                timings : ['12:00PM','03:00PM','07:00PM','10:30PM'],
+                seats : seats
             },
             {
                 name : 'Sathyam Cinemas',
-                timings : ['11:00PM','03:00PM','07:00PM','10:30PM']  
+                timings : ['11:00PM','03:00PM','07:00PM','10:30PM'],
+                seats : seats
             },
             {
                 name : 'Gokumal Cinemas',
-                timings : ['03:00PM','07:00PM','10:30PM']  
+                timings : ['03:00PM','07:00PM','10:30PM'],
+                seats : seats
             }
         ]
     },
@@ -110,23 +132,28 @@ export const MOVIES: Movie[] = [
         theatre : [
             {
                 name : 'Kumaran Theatres',
-                timings : ['11:00AM','06:30PM','07:30PM','10:30PM'], 
+                timings : ['11:00AM','06:30PM','07:30PM','10:30PM'],
+                seats : seats
             },
             {
                 name : 'Mani Talkies',
-                timings : ['11:00AM','06:30PM','07:30PM','02:30PM'] 
+                timings : ['11:00AM','06:30PM','07:30PM','02:30PM'],
+                seats : seats
             },
             {
                 name : 'Kasi Talkies',
-                timings : ['11:00AM','06:30PM','07:30PM','12:30PM'] 
+                timings : ['11:00AM','06:30PM','07:30PM','12:30PM'],
+                seats : seats
             },
             {
                 name : 'Kasi Talkies',
-                timings : ['11:00AM','06:30PM'] 
+                timings : ['11:00AM','06:30PM'],
+                seats : seats
             },
             {
                 name : 'Kasi Talkies',
-                timings : ['11:00AM','06:30PM','05:30PM'] 
+                timings : ['11:00AM','06:30PM','05:30PM'],
+                seats : seats
             }
         ]
     },
@@ -142,23 +169,28 @@ export const MOVIES: Movie[] = [
         theatre : [
             {
                name : 'EVP Cinemas',
-               timings : ['11:00AM','06:30PM','05:30PM'] 
+               timings : ['11:00AM','06:30PM','05:30PM'],
+               seats : seats
             },
             {
                 name : 'Kasi Talkies',
-                timings : ['12:00PM','06:30PM','05:30PM'] 
+                timings : ['12:00PM','06:30PM','05:30PM'],
+                seats : seats
             },
             {
                 name : 'Gokulam Cinemas',
-                timings : ['01:00PM','06:30PM','05:30PM'] 
+                timings : ['01:00PM','06:30PM','05:30PM'],
+                seats : seats
             },
             {
                 name : 'Sathyam Cinemas',
-                timings : ['10:00AM','06:30PM','05:30PM'] 
+                timings : ['10:00AM','06:30PM','05:30PM'],
+                seats : seats
             },
             {
                 name : 'Hari Cinemas',
-                timings : ['10:30AM','06:30PM','05:30PM'] 
+                timings : ['10:30AM','06:30PM','05:30PM'],
+                seats : seats
             }
         ]
     },
@@ -191,3 +223,4 @@ export const PREMIERES: Premier[] = [
         language : 'English',
     },
 ]
+
