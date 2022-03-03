@@ -15,6 +15,7 @@ export class SeatsComponent implements OnInit {
 
   public seatNumber: number[];
   public seatAreaRight: string[];
+  public movies:Movie[];
   public movie:Movie;
   public theatreName:string;
   public showTime:string;
@@ -22,6 +23,8 @@ export class SeatsComponent implements OnInit {
   public theatre:Theatre;
   public seats:Seat;
   public seat:boolean = false;
+  public tickets:string[];
+  counter:number;
 
   constructor(private movieService: MoviesService ,private route: Router,private router: ActivatedRoute) { }
 
@@ -29,7 +32,9 @@ export class SeatsComponent implements OnInit {
     let title = this.router.snapshot.paramMap.get('movieTitle');
     let name = this.router.snapshot.paramMap.get('name');
     let timing = this.router.snapshot.paramMap.get('timing');
-    this.movie = this.movieService.getMovies().find(i => i.movieTitle === title) as Movie;
+    this.movies = this.router.snapshot.data["movies"];
+    //this.movieService.getMovies().subscribe((movies) => (this.movies = movies));
+    this.movie = this.movies.find(i => i.movieTitle === title) as Movie;
     this.theatreName = name as string;
     this.showTime = timing as string;
     this.theatre = this.movie.theatre.find(i => i.name === this.theatreName) as Theatre; 
@@ -43,10 +48,13 @@ export class SeatsComponent implements OnInit {
      if(id.classList.contains('disable')) {
       id.classList.remove('disable');
       id.className = 'enable';
+      this.tickets.pop;
+      console.log(this.tickets.length);
      } else if(!id.classList.contains('disable')) {
-      id.className = 'disable'; 
+      id.className = 'disable';
+      console.log(this.tickets.length);
      }
-    }
+  }
 
     gotoHome() {
       this.route.navigateByUrl('/');

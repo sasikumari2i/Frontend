@@ -1,5 +1,6 @@
+import { ConsoleLogger } from '@angular/compiler-cli/private/localize';
 import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Movie } from 'src/app/MockInterface';
 import { MoviesService } from 'src/app/services/movies.service';
 
@@ -22,17 +23,19 @@ export class HeaderComponent implements OnInit {
   headerRightNavList = ["ListYourShow","Corporates","Offers","Gift Cards"]
 
 
-  constructor(private movieService: MoviesService ,private router: Router) { 
+  constructor(private movieService: MoviesService ,private router: Router, private activatedRoute: ActivatedRoute) { 
   }
 
   ngOnInit(): void {
-    this.movies = this.movieService.getMovies();
+    //this.movies = this.activatedRoute.snapshot.data["movies"];
+    //console.log(this.movies);
+    this.movieService.getMovies().subscribe((movies) => (this.movies = movies));
+    //this.movies = this.movieService.getMovies();
   }
 
   getSearchFilter() {
     if(this.name != '') {
-      for(let movie in this.movies) {
-               
+      for(let movie in this.movies) {           
       }
     }
   }

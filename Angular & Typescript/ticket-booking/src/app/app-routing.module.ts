@@ -1,15 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
+import { MoviesResolver } from './resolvers/movies.resolver';
+import { HeaderComponent } from './components/header/header.component';
 
 const appRoutes: Routes = [
   {
     path: '', 
-    component : HomeComponent
+    component : HomeComponent,
+    resolve: { movies: MoviesResolver }
   },
   {
     path: 'seats', 
     loadChildren: () => import('./components/seats/seats.module').then(m => m.SeatsModule)
+    
   },
   {
     path: 'booking', 
@@ -21,7 +25,5 @@ const appRoutes: Routes = [
   imports: [RouterModule.forRoot(appRoutes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { 
-  
-}
+export class AppRoutingModule {  }
 
