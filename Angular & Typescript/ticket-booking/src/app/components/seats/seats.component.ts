@@ -33,7 +33,6 @@ export class SeatsComponent implements OnInit {
     let name = this.router.snapshot.paramMap.get('name');
     let timing = this.router.snapshot.paramMap.get('timing');
     this.movies = this.router.snapshot.data["movies"];
-    //this.movieService.getMovies().subscribe((movies) => (this.movies = movies));
     this.movie = this.movies.find(i => i.movieTitle === title) as Movie;
     this.theatreName = name as string;
     this.showTime = timing as string;
