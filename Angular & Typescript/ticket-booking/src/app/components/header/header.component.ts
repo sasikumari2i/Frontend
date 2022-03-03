@@ -1,4 +1,3 @@
-import { ConsoleLogger } from '@angular/compiler-cli/private/localize';
 import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Movie } from 'src/app/MockInterface';
@@ -27,10 +26,7 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    //this.movies = this.activatedRoute.snapshot.data["movies"];
-    //console.log(this.movies);
     this.movieService.getMovies().subscribe((movies) => (this.movies = movies));
-    //this.movies = this.movieService.getMovies();
   }
 
   getSearchFilter() {

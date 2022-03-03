@@ -15,6 +15,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import { PopupComponent } from './components/popup/popup.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {MatInputModule} from '@angular/material/input';
     HomeComponent,
     FooterComponent,
     MoviesComponent,
-    PremiersComponent
+    PremiersComponent,
+    PopupComponent
   ],
   imports: [
     MatInputModule,

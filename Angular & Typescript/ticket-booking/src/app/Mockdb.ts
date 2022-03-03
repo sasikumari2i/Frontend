@@ -5,7 +5,7 @@ import { Seat } from "./MockInterface"
 export const seats:Seat = {
     seatAreaLeft : ['AL','BL','CL','DL','EL','FL','GL','HL'],
     seatAreaRight : ['AR','BR','CR','DR','ER','FR','GR','HR'],
-    seatNumber : [1,2,3,4,]
+    seatNumber : [1,2,3,4]
 }
 
 export const MOVIES: Movie[] = [

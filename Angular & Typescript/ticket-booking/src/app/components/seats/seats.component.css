@@ -35,6 +35,25 @@
   font-weight: 800;
 }
 
+.payment {
+  transition: 1s;
+  padding: 2px 8px;
+  width: 100%;
+  box-shadow: #eff1f3;
+}
+
+.payment button {
+  margin: auto 40%;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 2px 46px;
+  outline-style: none;
+  appearance: none;
+  border: none;
+  color: white;
+  border-radius: 4px;
+}
+
 .seats button {
   font-size: 12px;
   padding: 2px 8px;

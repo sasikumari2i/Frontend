@@ -3,7 +3,7 @@
     <span><img src="../../assets/bookmyshow.png" (click)='gotoHome()'></span>
   </div>
   <div class="sign-in">
-      <span><button class="signin-button">Book Tickets</button></span>
+      <span><button class="signin-button" (click)="goBack()">Back</button></span>
   </div>
 </div>
 <div class="movie"><span class="title"><h4>{{ movie.movieTitle }}</h4></span>
@@ -14,13 +14,16 @@
   <h6>Choose your seats</h6>
   <div class="seats">
     <table>
-      <div *ngFor="let i of [0,1]" class="seating-details">
-        <tr *ngFor="let outerIndex of seatAreaLeft">
+      <div *ngFor="let categories of seatCategories" class="seating-details">
+        <tr *ngFor="let outerIndex of categories">
           <td *ngFor="let innerIndex of seatNumber">
-            <button class="enable" id="{{ outerIndex + innerIndex }}"  #id (click)="getSeat(id)">{{ outerIndex + innerIndex }}</button>
+            <button class="enable" #id (click)="getSeat(id)">{{ outerIndex + innerIndex }}</button>
           </td>
         </tr>
       </div>
     </table>
   </div>
+</div>
+<div *ngIf="getPayment()" class="payment">
+  <button class="signin-button" (click)="openDialog()">Pay Rs.{{price}}</button>
 </div>

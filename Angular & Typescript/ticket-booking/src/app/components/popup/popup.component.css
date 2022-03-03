@@ -1,0 +1,17 @@
+div {
+    padding: 1%;
+    margin: 0;
+}
+
+button {
+    background-color: #1ea83c;
+    margin: auto;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 8px;
+    outline-style: none;
+    appearance: none;
+    border: none;
+    color: white;
+    border-radius: 4px;
+}

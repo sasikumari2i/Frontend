@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SeatsComponent } from './seats.component';
 import { SeatsRoutingModule } from './seats.routing.module';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -10,7 +11,8 @@ import { SeatsRoutingModule } from './seats.routing.module';
   ],
   imports: [
     CommonModule,
-    SeatsRoutingModule
+    SeatsRoutingModule,
+    MatDialogModule
   ]
 })
 export class SeatsModule { }
