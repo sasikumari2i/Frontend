@@ -4,7 +4,7 @@
       <div class="logo">
         <span><img src="../../assets/bookmyshow.png" (click)='gotoHome()'></span>
           <input #searchInput [(ngModel)]="name"
-          type="text" (input) ="getSearchFilter()"
+          type="text"
           placeholder="Search for Movies,Events,Plays,Sports and Activities" [matAutocomplete]="auto"/>
           <mat-autocomplete #auto="matAutocomplete">
             <mat-option *ngFor="let option of movies" [value]="option.movieTitle" (click)="itemClick(option.movieTitle)">

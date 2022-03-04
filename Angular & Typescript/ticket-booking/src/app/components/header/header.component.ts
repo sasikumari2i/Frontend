@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { Movie } from 'src/app/MockInterface';
 import { MoviesService } from 'src/app/services/movies.service';
 
@@ -22,18 +22,11 @@ export class HeaderComponent implements OnInit {
   headerRightNavList = ["ListYourShow","Corporates","Offers","Gift Cards"]
 
 
-  constructor(private movieService: MoviesService ,private router: Router, private activatedRoute: ActivatedRoute) { 
+  constructor(private movieService: MoviesService ,private router: Router) { 
   }
 
   ngOnInit(): void {
     this.movieService.getMovies().subscribe((movies) => (this.movies = movies));
-  }
-
-  getSearchFilter() {
-    if(this.name != '') {
-      for(let movie in this.movies) {           
-      }
-    }
   }
 
   gotoHome() {

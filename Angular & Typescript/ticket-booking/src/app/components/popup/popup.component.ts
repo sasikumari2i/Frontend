@@ -7,8 +7,6 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PopupComponent implements OnInit {
 
-  @Input() ticketsBooked: number;
-
   constructor() { }
 
   ngOnInit(): void {

@@ -1,6 +1,5 @@
 import { Component, OnInit,  Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { MoviesService } from 'src/app/services/movies.service';
 import { Movie } from 'src/app/MockInterface';
 import { Theatre } from 'src/app/MockInterface';
 import { Router } from '@angular/router';
@@ -15,20 +14,14 @@ import { PopupComponent } from '../popup/popup.component';
 })
 export class SeatsComponent implements OnInit {
 
-  @Output() onItemClick: EventEmitter<number> = new EventEmitter();
-
   public seatNumber: number[];
-  public seatAreaRight: string[];
   public movies:Movie[];
   public movie:Movie;
   public theatreName:string;
   public showTime:string;
-  public seatAreaLeft:string[];
   public theatre:Theatre;
   public seats:Seat;
-  public seat:boolean = false;
-  public tickets:string[] =[];
-  public counter:number;
+  public tickets:string[] = [];
   public seatCategories: Array<Array<string>>;
   public price:number;
   public movieTitle:string;
@@ -47,13 +40,11 @@ export class SeatsComponent implements OnInit {
     this.theatre = this.movie.theatre.find(i => i.name === this.theatreName) as Theatre; 
     this.seats = this.theatre.seats;
     this.seatNumber = this.seats.seatNumber;
-    this.seatAreaLeft = this.seats.seatAreaLeft;
-    this.seatAreaRight = this.seats.seatAreaRight;
     this.seatCategories = [this.seats.seatAreaLeft,this.seats.seatAreaRight];
   }
 
   openDialog() {
-    this.dialogRef.open(PopupComponent)
+    this.dialogRef.open(PopupComponent);
   }
 
   getSeat(id:HTMLElement) {
@@ -64,7 +55,6 @@ export class SeatsComponent implements OnInit {
       id.classList.remove('disable');
       id.className = 'enable';
       this.tickets.pop();
-      console.log(this.tickets.length);
     }  
   }
 
