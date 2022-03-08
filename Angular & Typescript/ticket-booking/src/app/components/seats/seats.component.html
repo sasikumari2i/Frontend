@@ -3,10 +3,10 @@
     <span><img src="../../assets/bookmyshow.png" (click)='gotoHome()'></span>
   </div>
   <div class="sign-in">
-      <span><button class="signin-button" (click)="goBack()">Back</button></span>
+      <span><button class="signin-button">Sign in</button></span>
   </div>
 </div>
-<div class="movie"><span class="title"><h4>{{ movie.movieTitle }}</h4></span>
+<div class="movie"><span class="title"><h4 (click)="goBack()">{{ movie.movieTitle }}</h4></span>
   <div class="theatre"><span>{{ theatreName }}</span>
    <span>{{ showTime }}</span></div>
 </div>

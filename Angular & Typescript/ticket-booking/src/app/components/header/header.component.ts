@@ -26,7 +26,7 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.movieService.getMovies().subscribe((movies) => (this.movies = movies));
+    //this.movieService.getMovies().subscribe((movies) => (this.movies = movies));
   }
 
   gotoHome() {

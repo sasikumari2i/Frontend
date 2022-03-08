@@ -10,11 +10,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
-import {MatAutocompleteModule} from '@angular/material/autocomplete';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { PopupComponent } from './components/popup/popup.component';
-
+import { HttpClientModule } from '@angular/common/http'; 
+import { MoviesResolver } from './resolvers/movies.resolver';
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,9 +36,10 @@ import { PopupComponent } from './components/popup/popup.component';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatSliderModule
+    MatSliderModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [MoviesResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

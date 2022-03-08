@@ -7,12 +7,11 @@ const appRoutes: Routes = [
   {
     path: '', 
     component : HomeComponent,
-    resolve: { movies: MoviesResolver }
+    //resolve: { movies: MoviesResolver }
   },
   {
     path: 'seats', 
     loadChildren: () => import('./components/seats/seats.module').then(m => m.SeatsModule)
-    
   },
   {
     path: 'booking', 

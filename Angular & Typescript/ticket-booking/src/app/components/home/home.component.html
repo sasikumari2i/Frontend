@@ -1,31 +1,38 @@
 <div class="middle-content-container">
-    <div class="main-banner-container">
-        <ngb-carousel>
-          <ng-template *ngFor="let image of images" ngbSlide>
-            <div class="picsum-img-wrapper">
-              <img [src]="image" alt="" />
-            </div>
-          </ng-template>
-        </ngb-carousel>
+  <div class="main-banner-container">
+    <ngb-carousel>
+      <ng-template *ngFor="let image of images" ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img [src]="image" alt="" />
+        </div>
+        {{ movies }}
+      </ng-template>
+    </ngb-carousel>
+  </div>
+  <div class="main-content-container">
+    <div class="movies">
+      <div class="movies-heading">
+        <span class="heading">Recommended Movies</span>
+        <span class="see-all">See All ></span>
       </div>
-    <div class="main-content-container">
-        <div class="movies">
-          <div class="movies-heading">
-            <span class="heading" >Recommended Movies</span>
-            <span class="see-all">See All ></span>
-          </div>
-          <div class="card-container">
-             <div *ngFor="let movie of movies" class="movie-card" [routerLink]="['./booking',movie.movieTitle]">
-              <img src="{{ movie.img }}" alt="" />
-              <div class="card-body">
-                <span class="card-title">{{ movie.movieTitle }}</span>
-                <span class="card-text"><p>{{ movie.genre }}</p></span>
-              </div>
-            </div>
+      <div class="card-container">
+        <div
+          *ngFor="let movie of movies"
+          class="movie-card"
+          [routerLink]="['./booking', movie.movieTitle]"
+        >
+          <img src="{{ movie.img }}" alt="" />
+          <div class="card-body">
+            <span class="card-title">{{ movie.movieTitle }}</span>
+            <span class="card-text"
+              ><p>{{ movie.genre }}</p></span
+            >
           </div>
         </div>
       </div>
-      <div [ngStyle]="{'background-color': '#2B3148','color' : 'white' }" class="main-content-container">
+    </div>
+  </div>
+  <!--<div [ngStyle]="{'background-color': '#2B3148','color' : 'white' }" class="main-content-container">
         <div class="movies">
           <div class="movies-heading">
             <span class="heading">Premieres</span>
@@ -41,4 +48,5 @@
           </div>
         </div>
       </div>
+</div>-->
 </div>

@@ -42,6 +42,10 @@
   box-shadow: #eff1f3;
 }
 
+.movie span h4 {
+  cursor: pointer;
+}
+
 .payment button {
   margin: auto 40%;
   font-size: 15px;

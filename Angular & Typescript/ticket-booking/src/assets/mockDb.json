@@ -1,0 +1,300 @@
+[
+    {
+        "img" : "../../assets/movie1.jpg",
+        "movieTitle" : "FIR",
+        "genre" : "Thriller",
+            "banner" : "../../assets/FIR-banner.jpg",
+            "votes": "84%",
+            "time": "2h 58m",
+            "cert": "UA",
+            "date": "24,Feb,2022",
+            "theatre" : [
+                {
+                   "name" : "AGS Cinemas",
+                   "timings" : ["4:30AM","10:45AM","06:30PM"], 
+                   "seats" : 
+                        {
+                            "seatAreaLeft" : ["AL","BL","CL","DL","EL","FL","GL","HL"],
+                            "seatAreaRight" : ["AR","BR","CR","DR","R","FR","GR","HR"],
+                            "seatNumber" : [1,2,3,4]
+                        }
+                },
+                {
+                    "name" : "EVP Cinemas",
+                    "timings" : ["12:00PM","03:00PM","07:00PM","10:30PM"],
+                    "seats" : 
+                        {
+                            "seatAreaLeft" : ["AL","BL","CL","DL","EL","FL","GL","HL"],
+                            "seatAreaRight" : ["AR","BR","CR","DR","R","FR","GR","HR"],
+                            "seatNumber" : [1,2,3,4]
+                        }
+                 },
+                 {
+                    "name" : "Kasi Talkies",
+                    "timings" : ["01:00PM","04:00PM","07:30PM"],
+                    "seats" : 
+                        {
+                            "seatAreaLeft" : ["AL","BL","CL","DL","EL","FL","GL","HL"],
+                            "seatAreaRight" : ["AR","BR","CR","DR","R","FR","GR","HR"],
+                            "seatNumber" : [1,2,3,4]
+                        }
+                 },
+                 {
+                    "name": "Sathyam Cinemas",
+                    "timings" : ["12:00PM","07:00PM","10:30PM"],
+                    "seats" : 
+                    {
+                        "seatAreaLeft" : ["AL","BL","CL","DL","EL","FL","GL","HL"],
+                        "seatAreaRight" : ["AR","BR","CR","DR","R","FR","GR","HR"],
+                        "seatNumber" : [1,2,3,4]
+                    }
+                 },
+                 {
+                    "name" : "Gokul Theatres",
+                    "timings" : ["12:00PM","03:00PM","10:30PM"],
+                    "seats" : 
+                    {
+                        "seatAreaLeft" : ["AL","BL","CL","DL","EL","FL","GL","HL"],
+                        "seatAreaRight" : ["AR","BR","CR","DR","R","FR","GR","HR"],
+                        "seatNumber" : [1,2,3,4]
+                    }
+                 }
+            ]
+        },
+        {
+            "img" : "../../assets/movie2.jpg",
+            "movieTitle" : "UNCHARTED",
+            "genre" : "Action",
+            "banner" : "../../assets/movie2-banner.jpg",
+            "votes": "84%",
+            "time": "2h 20m",
+            "cert": "UA",
+            "date": "21,Feb,2022",
+            "theatre" : [
+                {
+                   "name" : "GK Cinemas",
+                   "timings" : ["12:00PM","03:00PM","07:00PM","10:40PM"],
+                   "seats" : 
+                   {
+                    "seatAreaLeft" : ["AL","BL","CL","DL","EL","FL","GL","HL"],
+                    "seatAreaRight" : ["AR","BR","CR","DR","R","FR","GR","HR"],
+                    "seatNumber" : [1,2,3,4]
+                    }
+                },
+                {
+                    "name" : "Sathyam Cinemas",
+                    "timings" : ["12:00PM","03:00PM","07:00PM","10:30PM"],
+                    "seats" : 
+                    {
+                        "seatAreaLeft" : ["AL","BL","CL","DL","EL","FL","GL","HL"],
+                        "seatAreaRight" : ["AR","BR","CR","DR","R","FR","GR","HR"],
+                        "seatNumber" : [1,2,3,4]
+                        }
+
+                 },
+                 {
+                    "name" : "Gokulam Cinemas",
+                    "timings" : ["12:00PM","03:00PM","07:00PM","10:30PM"],
+                    "seats" : 
+                    {
+                        "seatAreaLeft" : ["AL","BL","CL","DL","EL","FL","GL","HL"],
+                        "seatAreaRight" : ["AR","BR","CR","DR","R","FR","GR","HR"],
+                        "seatNumber" : [1,2,3,4]
+                        }
+                 },
+                {
+                    "name" : "Green Cinemas",
+                    "timings" : ["12:00PM","03:00PM","07:00PM","10:30PM"],
+                    "seats" : 
+                    {
+                        "seatAreaLeft" : ["AL","BL","CL","DL","EL","FL","GL","HL"],
+                        "seatAreaRight" : ["AR","BR","CR","DR","R","FR","GR","HR"],
+                        "seatNumber" : [1,2,3,4]
+                    }
+                },
+                {
+                    "name" : "INOX National",
+                    "timings" : ["12:00PM","03:00PM","07:00PM","10:30PM"],
+                    "seats" : 
+                    {
+                        "seatAreaLeft" : ["AL","BL","CL","DL","EL","FL","GL","HL"],
+                        "seatAreaRight" : ["AR","BR","CR","DR","R","FR","GR","HR"],
+                        "seatNumber" : [1,2,3,4]
+                        }
+                }
+            ]
+        },
+        {
+            "img" : "../../assets/movie3.jpg",
+            "movieTitle" : "Veerapandiyapuram",
+            "genre" : "Action",
+            "banner" : "../../assets/movie3-banner.jpg",
+            "votes" : "84%",
+            "time" : "2h 34m",
+            "cert" : "UA",
+            "date" : "17,Feb,2022",
+            "theatre" : [
+                {
+                   "name" : "Jothi Theatre",
+                   "timings" : ["09:00AM","02:00PM","05:00PM","11:30PM"],
+                   "seats" : {
+                    "seatAreaLeft" : ["AL","BL","CL","DL","EL","FL","GL","HL"],
+                    "seatAreaRight" : ["AR","BR","CR","DR","R","FR","GR","HR"],
+                    "seatNumber" : [1,2,3,4]
+                    }
+                },
+                {
+                    "name" : "Kasi Talkies",
+                    "timings" : ["11:00AM","06:30PM","07:30PM"],
+                    "seats" : {
+                        "seatAreaLeft" : ["AL","BL","CL","DL","EL","FL","GL","HL"],
+                        "seatAreaRight" : ["AR","BR","CR","DR","R","FR","GR","HR"],
+                        "seatNumber" : [1,2,3,4]
+                        }
+                },
+                {
+                    "name" : "Luxe Cinemas",
+                    "timings" : ["12:00PM","03:00PM","07:00PM","10:30PM"],
+                    "seats" : {
+                        "seatAreaLeft" : ["AL","BL","CL","DL","EL","FL","GL","HL"],
+                        "seatAreaRight" : ["AR","BR","CR","DR","R","FR","GR","HR"],
+                        "seatNumber" : [1,2,3,4]
+                        }
+                },
+                {
+                    "name" : "Sathyam Cinemas",
+                    "timings" : ["11:00PM","03:00PM","07:00PM","10:30PM"],
+                    "seats" : {
+                        "seatAreaLeft" : ["AL","BL","CL","DL","EL","FL","GL","HL"],
+                        "seatAreaRight" : ["AR","BR","CR","DR","R","FR","GR","HR"],
+                        "seatNumber" : [1,2,3,4]
+                        }
+                },
+                {
+                    "name" : "Gokumal Cinemas",
+                    "timings" : ["03:00PM","07:00PM","10:30PM"],
+                    "seats" : {
+                        "seatAreaLeft" : ["AL","BL","CL","DL","EL","FL","GL","HL"],
+                        "seatAreaRight" : ["AR","BR","CR","DR","R","FR","GR","HR"],
+                        "seatNumber" : [1,2,3,4]
+                        }
+                }
+            ]
+        },
+        {
+            "img" : "../../assets/movie4.jpg",
+            "movieTitle" : "Neyyattinkara Gopante Aaraattu",
+            "genre" : "Comedy",
+            "banner" : "../../assets/movie4-banner.jpg",
+            "votes": "84%",
+            "time" : "2h 43m",
+            "cert" : "UA",
+            "date" : "10,Feb,2022",
+            "theatre" : [
+                {
+                    "name" : "Kumaran Theatres",
+                    "timings" : ["11:00AM","06:30PM","07:30PM","10:30PM"],
+                    "seats" : {
+                        "seatAreaLeft" : ["AL","BL","CL","DL","EL","FL","GL","HL"],
+                        "seatAreaRight" : ["AR","BR","CR","DR","R","FR","GR","HR"],
+                        "seatNumber" : [1,2,3,4]
+                        }
+                },
+                {
+                    "name" : "Mani Talkies",
+                    "timings" : ["11:00AM","06:30PM","07:30PM","02:30PM"],
+                    "seats" : {
+                        "seatAreaLeft" : ["AL","BL","CL","DL","EL","FL","GL","HL"],
+                        "seatAreaRight" : ["AR","BR","CR","DR","R","FR","GR","HR"],
+                        "seatNumber" : [1,2,3,4]
+                        }
+                },
+                {
+                    "name" : "Kasi Talkies",
+                    "timings" : ["11:00AM","06:30PM","07:30PM","12:30PM"],
+                    "seats" : {
+                        "seatAreaLeft" : ["AL","BL","CL","DL","EL","FL","GL","HL"],
+                        "seatAreaRight" : ["AR","BR","CR","DR","R","FR","GR","HR"],
+                        "seatNumber" : [1,2,3,4]
+                        }
+                },
+                {
+                    "name" : "Kasi Talkies",
+                    "timings" : ["11:00AM","06:30PM"],
+                    "seats" : {
+                        "seatAreaLeft" : ["AL","BL","CL","DL","EL","FL","GL","HL"],
+                        "seatAreaRight" : ["AR","BR","CR","DR","R","FR","GR","HR"],
+                        "seatNumber" : [1,2,3,4]
+                        }
+                },
+                {
+                    "name" : "Kasi Talkies",
+                    "timings" : ["11:00AM","06:30PM","05:30PM"],
+                    "seats" : {
+                        "seatAreaLeft" : ["AL","BL","CL","DL","EL","FL","GL","HL"],
+                        "seatAreaRight" : ["AR","BR","CR","DR","R","FR","GR","HR"],
+                        "seatNumber" : [1,2,3,4]
+                        }
+                }
+            ]
+        },
+        {
+            "img" : "../../assets/movie5.jpg",
+            "movieTitle" : "Kadaisi Vivasayi",
+            "genre" : "Comedy",
+            "banner" : "../../assets/movie5-banner.jpg",
+            "votes" : "84%",
+            "time" : "2h 50m",
+            "cert" : "UA",
+            "date" : "1,Feb,2022",
+            "theatre" : [
+                {
+                   "name" : "EVP Cinemas",
+                   "timings" : ["11:00AM","06:30PM","05:30PM"],
+                   "seats" : {
+                    "seatAreaLeft" : ["AL","BL","CL","DL","EL","FL","GL","HL"],
+                    "seatAreaRight" : ["AR","BR","CR","DR","R","FR","GR","HR"],
+                    "seatNumber" : [1,2,3,4]
+                    }
+                },
+                {
+                    "name" : "Kasi Talkies",
+                    "timings" : ["12:00PM","06:30PM","05:30PM"],
+                    "seats" : {
+                        "seatAreaLeft" : ["AL","BL","CL","DL","EL","FL","GL","HL"],
+                        "seatAreaRight" : ["AR","BR","CR","DR","R","FR","GR","HR"],
+                        "seatNumber" : [1,2,3,4]
+                        }
+                },
+                {
+                    "name" : "Gokulam Cinemas",
+                    "timings" : ["01:00PM","06:30PM","05:30PM"],
+                    "seats" : {
+                        "seatAreaLeft" : ["AL","BL","CL","DL","EL","FL","GL","HL"],
+                        "seatAreaRight" : ["AR","BR","CR","DR","R","FR","GR","HR"],
+                        "seatNumber" : [1,2,3,4]
+                        }
+                },
+                {
+                    "name" : "Sathyam Cinemas",
+                    "timings" : ["10:00AM","06:30PM","05:30PM"],
+                    "seats" : {
+                        "seatAreaLeft" : ["AL","BL","CL","DL","EL","FL","GL","HL"],
+                        "seatAreaRight" : ["AR","BR","CR","DR","R","FR","GR","HR"],
+                        "seatNumber" : [1,2,3,4]
+                        }
+                },
+                {
+                    "name" : "Hari Cinemas",
+                    "timings" : ["10:30AM","06:30PM","05:30PM"],
+                    "seats" : {
+                        "seatAreaLeft" : ["AL","BL","CL","DL","EL","FL","GL","HL"],
+                        "seatAreaRight" : ["AR","BR","CR","DR","R","FR","GR","HR"],
+                        "seatNumber" : [1,2,3,4]
+                        }
+                }
+            ]
+        }
+    ]
+]
+     
